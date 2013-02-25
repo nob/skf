@@ -93,17 +93,18 @@ $admin_body_class .= ' no-customize-support';
 ?>
 </head>
 <body class="wp-admin wp-core-ui no-js <?php echo apply_filters( 'admin_body_class', '' ) . " $admin_body_class"; ?>">
+<?php if (WP_DEBUG) { ?>
+<div style="background-color:#D96C00;color:#D8D8D8;font-weight:bold;padding:2px 10px;">Server Address: <?php echo $_SERVER['SERVER_ADDR'];?></div>
+<? } ?>
 <script type="text/javascript">
 	document.body.className = document.body.className.replace('no-js','js');
 </script>
-
 <?php
 // If the customize-loader script is enqueued, make sure the customize
 // body classes are correct as early as possible.
 if ( wp_script_is( 'customize-loader', 'queue' ) && current_user_can( 'edit_theme_options' ) )
 	wp_customize_support_script();
 ?>
-
 <div id="wpwrap">
 <a tabindex="1" href="#wpbody-content" class="screen-reader-shortcut"><?php _e('Skip to main content'); ?></a>
 <?php require(ABSPATH . 'wp-admin/menu-header.php'); ?>
