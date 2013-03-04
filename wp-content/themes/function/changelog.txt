@@ -1,0 +1,71 @@
+*** Function Changelog ***
+
+2013.02.25 - version 1.1.5
+ * includes/theme-woocommerce.php - Update for WooCommerce 2.0 pagination
+ * css/layout.css
+   css/layout.less - Highlighting categories in menu when post from that category is being displayed
+
+2013.01.31 - version 1.1.4
+ * includes/intro-message.php - added stripslashes
+ * css/woocommerce.css - Fixed styling bug on Checkout page.
+ * style.css - Replaced "Istok Web" with "Lato" due to issues with the font and fixed issue with styling of submit buttons on iOS devices, added proper styling for portfolio items and fixes issue where the slide didn't fill the whole slider.
+ * css/layout.css - Fixes issue where the slide didn't fill the whole slider & .
+ * includes/theme-options.php - Replaced "Istok Web" with "Lato" due to issues with the font.
+ * includes/theme-actions.php - Replaced "Istok Web" with "Lato" due to issues with the font.
+ * css/layout.css - Changed the navigation default size to 1.1 from 1.2 due to new font & fixed navigation hightligh bug.
+ * includes/js/respond.js - *REMOVED*
+ * includes/theme-functions.php - Added the following functions: "woo_remove_responsive_design()", "woo_load_responsive_design_removal()" and "woo_remove_responsive_ie8". 
+ * css/non-responsive.css - *ADDED* IE8 layout
+ * includes/featured-products.php - Uses get_product() if WooCommerce 2.0 is in use & only featured posts are now displayed.
+ * includes/theme-woocommerce.php
+   includes/theme-functions.php - Uses WooCommerce 2.0 widget name for search widget
+ * css/woocommerce.css - Cart image width & Product loop styling (star rating, view cart link)
+ * styles/*ALL*.css - Alt styles now work properly on IE8
+ * style.css - show first slide when loading page & stying for "Latest Blog Posts"
+ * includes/js/general.js - Removed Uniform.JS from radio boxes.
+
+2013.01.15 - version 1.1.3
+ * includes/js/portfolio.js - fixed portfolio stacking bug with WP 3.5
+
+2013.01.10 - version 1.1.2
+ * css/layout.css - Fixed overflow of posts in the homepage.
+ * search.php - bug in Function's search.php closing div tag should be an h1
+ * includes/blog-posts.php - Localized "Latest Blog Posts" text
+ * style.css - Removed fixed width from Portfolio items.
+ * includes/theme-js.php - Fixed theme options conditionals.
+ * includes/theme-options.php - Products now inherit the overall layout settings of the theme.
+ * loop-portfolio.php - Fixed issue with Portfolio Archives returning an error.
+
+2012.12.18 - version 1.1.1
+ * includes/featured-slider.php - Changed video height to 551px (16:9)
+ * style.css - Fixed Testimonials and price in mobile mode plugin styling and price overlap in mobile mode.
+ * includes/theme-functions.php - Renamed "woo_header_search" to "woo_header_components" and moved mini cart inside.
+ * header.php - removed mini cart (moved to theme-functions.php)
+ * css/woocommerce.css - Fixed overlap of pagination, sort selector and price in mobile mode
+ * includes/theme-woocommerce.php - Fixed header styling problem
+
+2012.12.06 - version 1.1
+ * style.css
+   woocommerce.css - Styling preparation for WooCommerce 2.0
+ * includes/theme-woocommerce.php - disable WooCommerce lightbox when prettyPhoto is enabled
+
+2012.11.29 - version 1.0.3
+ * includes/theme-actions.php - load layout.css in header & fixed duplicated lightbox bug.
+ * style.css - remove layout.less from being included & improved Contact Template styling
+ * css/layout.css - added CSS file and changed media query to "all" & improved Contact Template styling
+ * styles/* - (ALL alt styles) fixed alt styles to work with 1.0.3
+ * includes/widgets/widget-woo-component.php - Removed invalid "Home Shop" item from the list.
+
+
+2012.11.27 - version 1.0.2
+ * includes/theme-widgets.php - added missing Woo Component widget
+ * includes/theme-options.php - added missing $other_entries variable for maps zoom level option,  moved backgroung to style.css and remove it from the options.
+ * style.css - moved background to style.css and removed it from the options. Fixed Contact Page Subscribe & Connect section.
+ * css/woocommerce.css - fixed cart double border issue.
+ * styles/* - (ALL Alt Styles) Fixed issue with images not showing up.
+
+2012.11.23 - version 1.0.1
+ * includes/theme-actions.php - Fix invalid function name when child theme active
+
+2012.11.22 - version 1.0
+ * First release!

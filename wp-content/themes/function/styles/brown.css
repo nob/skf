@@ -1,0 +1,356 @@
+@-webkit-keyframes spin-360 {
+  from {
+    -webkit-transform: rotate(0);
+    /* Saf3.1+, Chrome */
+  
+    -moz-transform: rotate(0);
+    /* FF3.5+ */
+  
+    -ms-transform: rotate(0);
+    /* IE9 */
+  
+    -o-transform: rotate(0);
+    /* Opera 10.5 */
+    transform: rotate(0);
+    zoom: 1;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    /* Saf3.1+, Chrome */
+  
+    -moz-transform: rotate(180deg);
+    /* FF3.5+ */
+  
+    -ms-transform: rotate(180deg);
+    /* IE9 */
+  
+    -o-transform: rotate(180deg);
+    /* Opera 10.5 */
+    transform: rotate(180deg);
+    zoom: 1;
+  }
+  to {
+    -webkit-transform: rotate(0);
+    /* Saf3.1+, Chrome */
+  
+    -moz-transform: rotate(0);
+    /* FF3.5+ */
+  
+    -ms-transform: rotate(0);
+    /* IE9 */
+  
+    -o-transform: rotate(0);
+    /* Opera 10.5 */
+    transform: rotate(0);
+    zoom: 1;
+  }
+}
+/* From style.css */
+a {
+  color: #a37e58;
+}
+a:hover {
+  color: #815c36;
+}
+#footer-widgets .widget_woodojo_tabs ul.nav-tabs:after,
+#footer-widgets .woocommerce_tabs ul.nav-tabs:after,
+#footer-widgets .woocommerce-tabs ul.nav-tabs:after,
+#footer-widgets .widget_woodojo_tabs ul.tabs:after,
+#footer-widgets .woocommerce_tabs ul.tabs:after,
+#footer-widgets .woocommerce-tabs ul.tabs:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+#footer-widgets .widget_woodojo_tabs ul.nav-tabs li.active a,
+#footer-widgets .woocommerce_tabs ul.nav-tabs li.active a,
+#footer-widgets .woocommerce-tabs ul.nav-tabs li.active a,
+#footer-widgets .widget_woodojo_tabs ul.tabs li.active a,
+#footer-widgets .woocommerce_tabs ul.tabs li.active a,
+#footer-widgets .woocommerce-tabs ul.tabs li.active a {
+  background: #a37e58;
+  border: 1px solid #826446;
+}
+#footer-widgets .widget_woodojo_tabs ul.nav-tabs li.active a:hover,
+#footer-widgets .woocommerce_tabs ul.nav-tabs li.active a:hover,
+#footer-widgets .woocommerce-tabs ul.nav-tabs li.active a:hover,
+#footer-widgets .widget_woodojo_tabs ul.tabs li.active a:hover,
+#footer-widgets .woocommerce_tabs ul.tabs li.active a:hover,
+#footer-widgets .woocommerce-tabs ul.tabs li.active a:hover {
+  background: #826446;
+}
+.woo-pagination .page-numbers {
+  color: #a37e58;
+}
+.widget_woodojo_tabs ul.nav-tabs li a:hover,
+.woocommerce_tabs ul.nav-tabs li a:hover,
+.woocommerce-tabs ul.nav-tabs li a:hover,
+.widget_woodojo_tabs ul.tabs li a:hover,
+.woocommerce_tabs ul.tabs li a:hover,
+.woocommerce-tabs ul.tabs li a:hover {
+  color: #a37e58;
+}
+.widget_woodojo_tabs ul.nav-tabs li.active a,
+.woocommerce_tabs ul.nav-tabs li.active a,
+.woocommerce-tabs ul.nav-tabs li.active a,
+.widget_woodojo_tabs ul.tabs li.active a,
+.woocommerce_tabs ul.tabs li.active a,
+.woocommerce-tabs ul.tabs li.active a {
+  background: #a37e58;
+  border: 1px solid #826446;
+}
+.widget_woodojo_tabs ul.nav-tabs li.active a:hover,
+.woocommerce_tabs ul.nav-tabs li.active a:hover,
+.woocommerce-tabs ul.nav-tabs li.active a:hover,
+.widget_woodojo_tabs ul.tabs li.active a:hover,
+.woocommerce_tabs ul.tabs li.active a:hover,
+.woocommerce-tabs ul.tabs li.active a:hover {
+  background: #826446;
+  border: 1px solid #71583d;
+}
+.widget_woodojo_tweets .follow-link a {
+  background: #a37e58;
+}
+.widget_woodojo_twitterprofile .follow-link a {
+  background: #a37e58;
+}
+#comments .comment .reply a {
+  color: #a37e58 !important;
+}
+#respond #commentform #submit {
+  background: #a37e58;
+}
+#respond #commentform #submit:hover {
+  background: #826446;
+}
+#respond #commentform #submit:active {
+  background: #614b34;
+}
+button.button {
+  background: #a37e58;
+}
+button.button:hover {
+  background: #826446;
+}
+button.button:active {
+  background: #614b34;
+}
+.home-section .btn,
+.home-section .button {
+  border: 1px solid #a37e58;
+  border-bottom-color: #926d47;
+  background-color: #b48f69;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b48f69), to(#926d47));
+  /* Saf4+, Chrome */
+
+  background-image: -webkit-linear-gradient(top, #b48f69, #926d47);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: -moz-linear-gradient(top, #b48f69, #926d47);
+  /* FF3.6+ */
+
+  background-image: -ms-linear-gradient(top, #b48f69, #926d47);
+  /* IE10 */
+
+  background-image: -o-linear-gradient(top, #b48f69, #926d47);
+  /* Opera 11.10+ */
+
+  background-image: linear-gradient(to bottom, #b48f69, #926d47);
+}
+.home-section .btn:hover,
+.home-section .button:hover {
+  text-decoration: none;
+  background-color: #b48f69;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b48f69), to(#815c36));
+  /* Saf4+, Chrome */
+
+  background-image: -webkit-linear-gradient(top, #b48f69, #815c36);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: -moz-linear-gradient(top, #b48f69, #815c36);
+  /* FF3.6+ */
+
+  background-image: -ms-linear-gradient(top, #b48f69, #815c36);
+  /* IE10 */
+
+  background-image: -o-linear-gradient(top, #b48f69, #815c36);
+  /* Opera 11.10+ */
+
+  background-image: linear-gradient(to bottom, #b48f69, #815c36);
+}
+.home-section .btn:active,
+.home-section .button:active {
+  border-color: #926d47;
+}
+#intro-message h1 a:hover {
+  color: #926d47;
+}
+#home-shop .onsale {
+  background: #a37e58;
+}
+#portfolio-gallery #port-tags a.current {
+  background: #a37e58;
+}
+/* From css/layout.css */
+@media only screen and (min-width: 768px) {
+  #top ul.nav > li.current_page_item a,
+  #top ul.nav > li.current_page_parent a,
+  #top ul.nav > li.current-menu-ancestor a,
+  #top ul.nav > li.current-cat a,
+  #top ul.nav > li.li.current-menu-item a {
+    color: #a37e58;
+  }
+  #navigation ul.nav > li.current_page_item a,
+  #navigation ul.nav > li.current_page_parent a,
+  #navigation ul.nav > li.current-menu-ancestor a,
+  #navigation ul.nav > li.current-cat a,
+  #navigation ul.nav > li.li.current-menu-item a {
+    background-color: #a37e58;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#a37e58), to(#704b25));
+    /* Saf4+, Chrome */
+  
+    background-image: -webkit-linear-gradient(top, #a37e58, #704b25);
+    /* Chrome 10+, Saf5.1+, iOS 5+ */
+  
+    background-image: -moz-linear-gradient(top, #a37e58, #704b25);
+    /* FF3.6+ */
+  
+    background-image: -ms-linear-gradient(top, #a37e58, #704b25);
+    /* IE10 */
+  
+    background-image: -o-linear-gradient(top, #a37e58, #704b25);
+    /* Opera 11.10+ */
+  
+    background-image: linear-gradient(to bottom, #a37e58, #704b25);
+  }
+}
+.ie8 #top ul.nav > li.current_page_item a,
+.ie8 #top ul.nav > li.current_page_parent a,
+.ie8 #top ul.nav > li.current-menu-ancestor a,
+.ie8 #top ul.nav > li.current-cat a,
+.ie8 #top ul.nav > li.li.current-menu-item a {
+  color: #a37e58;
+}
+.ie8 #navigation ul.nav > li.current_page_item a,
+.ie8 #navigation ul.nav > li.current_page_parent a,
+.ie8 #navigation ul.nav > li.current-menu-ancestor a,
+.ie8 #navigation ul.nav > li.current-cat a,
+.ie8 #navigation ul.nav > li.li.current-menu-item a {
+  background-color: #a37e58;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a37e58), to(#704b25));
+  /* Saf4+, Chrome */
+
+  background-image: -webkit-linear-gradient(top, #a37e58, #704b25);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: -moz-linear-gradient(top, #a37e58, #704b25);
+  /* FF3.6+ */
+
+  background-image: -ms-linear-gradient(top, #a37e58, #704b25);
+  /* IE10 */
+
+  background-image: -o-linear-gradient(top, #a37e58, #704b25);
+  /* Opera 11.10+ */
+
+  background-image: linear-gradient(to bottom, #a37e58, #704b25);
+}
+/* From css/woocommerce.css */
+.star-rating span {
+  background: #a37e58;
+}
+p.stars span a:hover,
+p.stars span a:focus {
+  background: #a37e58;
+}
+p.stars span a.active {
+  background: #a37e58;
+}
+.widget_layered_nav ul li.chosen a {
+  background: #a37e58;
+}
+.widget_price_filter .price_slider_amount .button {
+  border-bottom-color: #926d47;
+}
+.widget_price_filter .ui-slider .ui-slider-handle {
+  border: 1px solid #a37e58;
+}
+.widget_price_filter .ui-slider .ui-slider-range {
+  border: 1px solid #675038;
+  background-color: #896a4a;
+  background-color: transparent 50%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent 50%), to(#a37e58 50%));
+  /* Saf4+, Chrome */
+
+  background-image: -webkit-linear-gradient(top, transparent 50%, #a37e58 50%);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: -moz-linear-gradient(top, transparent 50%, #a37e58 50%);
+  /* FF3.6+ */
+
+  background-image: -ms-linear-gradient(top, transparent 50%, #a37e58 50%);
+  /* IE10 */
+
+  background-image: -o-linear-gradient(top, transparent 50%, #a37e58 50%);
+  /* Opera 11.10+ */
+
+  background-image: linear-gradient(to bottom, transparent 50%, #a37e58 50%);
+}
+.onsale {
+  background: #a37e58;
+}
+.quantity .plus,
+.quantity .minus {
+  background: #a37e58;
+}
+ul.products li.product .btn,
+ul.products li.product .button {
+  border: 1px solid #a37e58;
+  border-bottom-color: #926d47;
+  background-color: #b48f69;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b48f69), to(#926d47));
+  /* Saf4+, Chrome */
+
+  background-image: -webkit-linear-gradient(top, #b48f69, #926d47);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: -moz-linear-gradient(top, #b48f69, #926d47);
+  /* FF3.6+ */
+
+  background-image: -ms-linear-gradient(top, #b48f69, #926d47);
+  /* IE10 */
+
+  background-image: -o-linear-gradient(top, #b48f69, #926d47);
+  /* Opera 11.10+ */
+
+  background-image: linear-gradient(to bottom, #b48f69, #926d47);
+}
+ul.products li.product .btn:hover,
+ul.products li.product .button:hover {
+  text-decoration: none;
+  background-color: #b48f69;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b48f69), to(#815c36));
+  /* Saf4+, Chrome */
+
+  background-image: -webkit-linear-gradient(top, #b48f69, #815c36);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+
+  background-image: -moz-linear-gradient(top, #b48f69, #815c36);
+  /* FF3.6+ */
+
+  background-image: -ms-linear-gradient(top, #b48f69, #815c36);
+  /* IE10 */
+
+  background-image: -o-linear-gradient(top, #b48f69, #815c36);
+  /* Opera 11.10+ */
+
+  background-image: linear-gradient(to bottom, #b48f69, #815c36);
+}
+ul.products li.product .btn:active,
+ul.products li.product .button:active {
+  border-color: #926d47;
+}
+.single-product .summary .price {
+  color: #a37e58;
+}
