@@ -1,0 +1,10 @@
+#icon-edit.icon32-posts-album, #icon-post.icon32.posts-album, body.edit-tags-php #icon-edit { background: transparent url(../images/icon_32.png) no-repeat 5px 0px; }
+
+#woo-album .hide { display: none; }
+#woo-album .refresh-container { margin-left: 8px; }
+
+.woo-manage-buttons { margin-top: 1.3em; }
+.woo-manage-buttons .button { margin-right: 5px; }
+.woo-manage-buttons .refresh, .woo-manage-buttons .select-all, .woo-manage-buttons .clear-all { margin-left: 5px; }
+
+.album-tracks input { margin-right: 10px; margin-top: 3px; }

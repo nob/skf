@@ -1,0 +1,16 @@
+#icon-edit.icon32-posts-event, #icon-post.icon32.posts-event, body.edit-tags-php #icon-edit { background: transparent url(../images/icon_32.png) no-repeat 5px 6px; }
+
+.column-event_date_status { width: 10%; }
+
+.event-timeframe { font-weight: normal; color: #333333; border: 1px solid; display: block; padding: 0.5em; margin-bottom: 5px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.event-timeframe.upcoming { background-color: #FCEFDC; border-color: #FF9900; }
+.event-timeframe.right-now { background-color: #E8FAE8; border-color: #009900; }
+.event-timeframe.past { background-color: #FBE8EC; border-color: #CC0033; }
+
+.subsubsub .upcoming a { color: #FF9900; }
+.subsubsub .right-now a { color: #009900; }
+.subsubsub .past a { color: #CC0033; }
+
+.subsubsub .upcoming a.current, .subsubsub .right-now a.current, .subsubsub .past a.current { color: #000000; }
+
+.tablenav select[name="m"] { width: 175px; }

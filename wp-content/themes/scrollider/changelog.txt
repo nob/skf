@@ -1,0 +1,109 @@
+*** Scrollider Changelog ***
+
+2013.02.13 - version 1.2.6
+ * includes/theme-woocommerce.php - Added add_theme_support( 'woocommerce' ) and fixed issue with the Sidebar always displaying on product archives & added support for WooCommerce 2.0 pagination.
+
+2013.02.06 - version 1.2.5
+ * /includes/js/featured-slider.js - Ensure pauseOnHover is correctly translated to boolean, and is implemented correctly.
+ * /includes/theme-js.php - Up the version number of the "featured-slider" script enqueue, in accordance with the updates to "featured-slider.js".
+ * /includes/widgets/widget-woo-post-type-slider.php - Added single=true to woo_image to make sure the image links to the post rather than the image in single posts. Removed localisation from "post" in the post type select box, to ensure it works correctly when the word "post" is localized.
+ * /style.css - Fixed viewport cut-off in News From Blog when layout is wider than default. 
+ * /layout.css - Made slide content area transparent in IE8.
+ * /css/layout.css - fixed top gap to only display when admin bar is displayed.
+
+2013.01.25 - version 1.2.4
+ * includes/widgets/widget-woo-post-type-slider.php - fixed localisation bug
+ * style.css - fixed footer bug on single feature pages
+ * style.css - fixed shadow cut-off on blog carousel
+ * includes/theme-js.php
+   includes/theme-woocommerce.php - use prettyPhoto for product galleries if enabled in theme and disable WooCommerce lightbox
+ * includes/theme-js.php - enabled touch gestures for flexslider
+ * css/woocommerce.css - styled rating aggregate in ul.products
+
+2013.01.15 - version 1.2.3
+ * includes/js/portfolio.js - fixed portfolio stacking bug with WP 3.5
+
+2013.01.07 - version 1.2.2
+ * css/layout.css - Fixed top gap when hidding the Admin Bar.
+ * style/(*ALL).css - Removed gap between content and header on Alt Styles.
+ * includes/theme-actions.php - Changed priority of the custom styling action to make sure it is loaded after the alt styles.
+
+2012.12.19 - version 1.2.1
+ * css/woocommerce.css - Fixed Reviews styling
+ * css/layout.css - Fixed bug with WP Admin Bar covering the slider
+ * includes/js/portfolio.js - Removed last class function
+
+2012.12.06 - version 1.2
+ * style.css - Styling preparation for WooCommerce 2.0
+ * includes/theme-woocommerce.php - disable WooCommerce lightbox when prettyPhoto is enabled
+
+2012.12.04 - version 1.1.7
+* /includes/theme-js.php - Renamed "third party" to "third-party" and loaded it as a dependency on "general"'s script enqueue.
+* /includes/widgets/widget-woo-post-type-slider.php - Fixes bug with slide not showing up if the limit set to 1.
+* style.css - Fixes bug with slide not showing up if the limit set to 1.
+* /includes/featured.php - Adds logic for optionally filtering by the "Slide Group" theme option.
+* /includes/theme-options.php - Adedd "Slide Group" theme option for controlling which slide group displays in the homepage featured slider.
+* /includes/theme-functions.php - Register the "slide-page" taxonomy inside the woo_add_slides() function.
+
+2012.11.29 - version 1.1.6
+* includes/layout.css - Fixed dropdown stlying bug when the parent page is active.
+
+2012.11.27 - version 1.1.5
+* includes/theme-functions.php - Fixed duplicated WooCommerce duplicated lightbox issue.
+* style.css - Fixed multiple IE8 bugs
+* includes/theme-options.php - Added Featured Image support to the "Features" Custom Post Type.
+* includes/js/portfolio.js - Fixed alignment issue when clicking on a tag.
+* includes/theme-js.php - Featured Slider - Fixed "hover on pause" option.
+* styles/* - (ALL) removed additional background color from alt styles
+* includes/js/featured-slider.js - Corrected the media query.
+
+2012.11.12 - version 1.1.4
+ * /css/woocommerce.css - Improved WooCommerce styling.
+ * /css/layout.css - Fixed issue with slider arrows not clickable.
+ * style.css - Fixed Contact Page Map color.
+ * /includes/theme-actions.php - Navigation Text Color option now works properly.
+ * /includes/widgets/widget-woo-relatedposts.php - Make sure the widget respects the "limit" setting.
+
+2012.10.02 - version 1.1.3
+ * includes/theme-options.php - Removed Advertising menu as it is not used on this theme.
+ * style.css - Fixed overflow happening in the slider widget
+ * includes/layout.css - Fixed sliding  effect in IE
+
+2012.09.27 - version 1.1.2
+ * /styles/green.css - Text was white on white in the footer.
+ * /styles/pink.css - Text was white on white in the footer.
+ * /css/layout.css - Remove width limitation in the logo.
+ * style.css - Fixed issue with Google Maps images.
+ * /includes/widgets/widget-woo-post-type-slider.php - Change button name to read "Portfolio Item".
+ * /includes/js/general.js - Added FitVids support to Portfolio Gallery.
+ * /includes/theme-options.php - Added woo_image support for Portfolio items and option to deactivate Auto Sliding.
+ * /includes/theme-actions.php - Custom typography fix
+ * /includes/widgets/widget-woo-relatedposts.php - Make sure the slugs are passed through to woo_get_posts_by_taxonomy(), instead of the term IDs.
+ * loop-portfolio.php - Added woo_loop_before and woo_loop_after hooks to Portfolio.
+ * template-contact.php - Fixed issue with email not being outputted correctly.
+
+2012.09.18 - version 1.1.1
+ * functions.php - Make sure theme-woocommerce.php loads only if WooCommerce is active.
+
+2012.09.01 - version 1.1
+ * native WooCommerce support
+ * added [sticky] shortcode
+
+2012.08.23 - version 1.0.1
+ * header.php - Changed slider conditional, now the slider loads for everyone.
+ * style.css - Changed styling to remove box shadow from the Homepage when using a custom homepage and added fix to prevent Firefox from breaking words.
+ * css/layout.css - moved slider related CSS rules to the .has-slider selector.
+ * includes/theme-js.php - prettyPhoto CSS was not being loaded, added to woothemes_add_css().
+ * includes/theme-options.php - Added option for the widgetized region heading in the homepage and url option to the slider.
+ * includes/theme-actions.php - Added body class for when the slider is active.
+ * includes/widgets/widget-woo-newsfromblog.php - Added extra logic to remove the ghost slide that was showing up.
+ * includes/widgets/widget-woo-newsfromblog.php - Added widget option to select auto-slide interval or to switch auto-slide off.
+ * includes/widgets/widget-woo-post-type-slider.php - Added widget option to select auto-slide interval or to switch auto-slide off.
+ * includes/widgets/widget-woo-relatedposts.php - Added extra logic to remove the ghost slide that was showing up.
+ * includes/js/featured-slider.js - Fixed the featured slider so that it works when only one slide is present.
+ * includes/js/post-type-slider.js - Added an option to the custom post type slider widget that allows the user to select auto-slide interval or to switch it off.
+ * includes/js/news-from-blog.js - Added an option to the news from the blog slider widget that allows the user to select auto-slide interval or to switch it off.
+
+
+2012.08.21 - version 1.0.0
+ * First release!

@@ -1,0 +1,243 @@
+/* Imports */
+/* Body */
+body {
+  color: #9e9e9e;
+  background: #000000;
+}
+/* General Links */
+a {
+  color: #db7a33;
+}
+a:hover {
+  color: #b95811;
+}
+#navigation ul.nav > li a {
+  text-shadow: 1px 1px 0 #222222;
+}
+/* Main Wrapper */
+#content {
+  background: none;
+}
+#content-top {
+  background: #000000;
+}
+#wrapper {
+  background: #000000;
+}
+/* Posts Container */
+.post,
+.type-page,
+.type-features,
+.search-results .features,
+.search-results .page,
+.search-results .type-product,
+.search-results .type-portfolio {
+  background: #111111;
+}
+/* Sub-Feature */
+#sub-feature {
+  background: #111111;
+  border-bottom: 1px solid #000000;
+  box-shadow: 0 1px 0 0 #000000;
+  -webkit-box-shadow: 0 1px 0 0 #000000;
+  color: #cccccc;
+}
+#sub-feature #social h3 {
+  color: #999999;
+}
+#sub-feature #features ul li h2 a {
+  color: #999999;
+}
+#sub-feature #features ul li a.read-more {
+  background-color: #db7a33;
+}
+#sub-feature #features ul li a.read-more:hover {
+  background-color: #a84700;
+}
+/* Footer */
+#footer {
+  background: #000000;
+}
+/* Footer Widgets */
+#footer-widgets-container {
+  background: #111111;
+  border-top: 1px solid #000000;
+}
+#footer-widgets-container #footer-widgets .widget {
+  color: #cccccc;
+  background: none;
+}
+#footer-widgets-container #footer-widgets .widget a {
+  color: #cccccc;
+}
+#footer-widgets-container #footer-widgets .widget h3 {
+  color: #ffffff;
+}
+/* Homepage Section Title */
+.section-title p:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #151515;
+  box-shadow: 0 1px 0 0 #393939;
+  -webkit-box-shadow: 0 1px 0 0 #393939;
+  display: block;
+  position: absolute;
+  top: 49%;
+  z-index: -999;
+}
+.section-title p span {
+  background: #000000;
+}
+/* Home Widgets */
+#home-widgets .block a {
+  color: #db7a33;
+}
+/* Global Widgets */
+.widget {
+  background: #111111;
+}
+.widget h3 {
+  color: #aaaaaa;
+}
+/* Dojo Tabs */
+.widget_woodojo_tabs .nav {
+  border-bottom: 1px solid #222222 !important;
+}
+.widget_woodojo_tabs .nav li a {
+  color: #db7a33;
+}
+.widget_woodojo_tabs .nav li a:hover {
+  border: 1px solid #222222 !important;
+  border-bottom-color: transparent !important;
+  background: #000000 !important;
+}
+.widget_woodojo_tabs .nav li.active a {
+  text-shadow: 1px 1px 0 #000000;
+  color: #db7a33 !important;
+  border: 1px solid #222222 !important;
+  border-bottom-color: transparent !important;
+}
+.widget_woodojo_tabs .tab-content ul {
+  padding: 0 !important;
+}
+.widget_woodojo_tabs .tab-content ul li {
+  border-bottom: 1px solid #222222;
+}
+.widget_woodojo_tabs .tab-content ul li a {
+  color: #db7a33;
+}
+/* News From Blog Widget */
+.widget_woo_newsfromblog {
+  background: none;
+}
+.widget_woo_newsfromblog h3 {
+  color: #9e9e9e;
+}
+.widget_woo_newsfromblog h3:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #151515;
+  box-shadow: 0 1px 0 0 #393939;
+  -webkit-box-shadow: 0 1px 0 0 #393939;
+  display: block;
+  position: absolute;
+  top: 49%;
+  z-index: -999;
+}
+.widget_woo_newsfromblog h3 span {
+  background: #000000;
+}
+.widget_woo_newsfromblog .section-blog ul li .post-more a {
+  color: #db7a33;
+}
+.widget_woo_newsfromblog .flexslider-nav-container ul {
+  background: #000000;
+}
+.widget_woo_newsfromblog .flexslider-nav-container:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #151515;
+  box-shadow: 0 1px 0 0 #393939;
+  -webkit-box-shadow: 0 1px 0 0 #393939;
+  display: block;
+  position: absolute;
+  top: 49%;
+  z-index: -999;
+}
+/* Post Meta Badge */
+.post .post-meta .post-comments a,
+.type-page .post-meta .post-comments a,
+.type-features .post-meta .post-comments a,
+.search-results .features .post-meta .post-comments a,
+.search-results .page .post-meta .post-comments a,
+.search-results .type-product .post-meta .post-comments a,
+.search-results .type-portfolio .post-meta .post-comments a {
+  background: #db7a33;
+}
+.post .post-meta .post-comments a:hover,
+.type-page .post-meta .post-comments a:hover,
+.type-features .post-meta .post-comments a:hover,
+.search-results .features .post-meta .post-comments a:hover,
+.search-results .page .post-meta .post-comments a:hover,
+.search-results .type-product .post-meta .post-comments a:hover,
+.search-results .type-portfolio .post-meta .post-comments a:hover {
+  background-color: #a84700;
+}
+/* Comments Respond */
+#respond {
+  background: #111111;
+  color: #9e9e9e;
+  border-color: #000000;
+}
+#respond label {
+  color: #b8b8b8;
+}
+#respond #reply-title {
+  color: #9e9e9e;
+}
+#respond #commentform label {
+  color: #9e9e9e;
+}
+/* Portfolio */
+#portfolio-gallery article {
+  box-shadow: 0 0 0 0 #888888;
+  -webkit-box-shadow: 0 0 0 0 #888888;
+  background: none;
+}
+#portfolio-gallery article .article-inner {
+  padding: 0 1.618em;
+}
+#portfolio-gallery .portfolio-item {
+  background: #111111;
+}
+#portfolio-gallery #port-tags a {
+  background: #db7a33;
+}
+#portfolio-gallery #port-tags a:before {
+  border-color: transparent #db7a33 transparent transparent;
+}
+#portfolio-gallery #port-tags a:after {
+  background: #000000;
+}
+/* Buttons */
+a.button,
+a.comment-reply-link,
+#commentform #submit,
+.submit,
+input[type=submit],
+input.button,
+button.button {
+  background: #db7a33;
+}
+a.button:hover,
+a.comment-reply-link:hover,
+#commentform #submit:hover,
+.submit:hover,
+input[type=submit]:hover,
+input.button:hover,
+button.button:hover {
+  background: #db7a33;
+}

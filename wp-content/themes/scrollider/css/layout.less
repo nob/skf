@@ -1,0 +1,646 @@
+/*
+The styles in this stylesheet only apply to resolutions 768px and up
+
+CALCULATING DIMENSIONS:
+----------------------
+The layout is fluid. The sote wrapper (.col-full) has a fixed pixel max-width.
+All subsequent dimensions are calculated based on that fixed pixel width, using the formula: target / context = result
+Credit - http://www.alistapart.com/articles/fluidgrids/
+
+-----
+INDEX
+-----
+
+1. Global dropdown styles
+2. Top Navigation
+3. Main navigation dropdown menus
+ -3.1 General dropdown menus
+4. Containers & Columns
+5. Footer widgets
+6. IE Fixes
+
+*/
+
+
+/*----------------------*/
+
+@import url(mixins.less);
+
+/*----------------------*/
+.col-full { padding: 0 2em; }
+@media only screen and (min-width: 768px) {
+
+	/* 1. GLOBAL DROPDOWN STYLES (these are purely for the dropdown layout and you should only edit the width of the dropdowns) */
+	ul.nav {
+		position: relative;
+		margin-bottom:0;
+		li {
+			position: relative;
+			float: left;
+			zoom:1;
+			list-style: none;
+			a {
+				display: block;
+				padding:.382em 1em;
+			}
+			&.parent { // Styles applied to all parent list items
+			}
+		}
+		/* LEVEL 2 */
+		ul {
+			width:11.089em;
+			visibility: hidden;
+			position: absolute;
+			top:100%;
+			left: 0;
+			z-index: 9999 !important;
+			margin:0;
+			li {
+				float: none;
+				a {
+					width: 100%;
+					display: inline-block;
+					.borderbox();
+				}
+				&.parent { // Styles applied to parent items in level 2
+				}
+			}
+		}
+		/* LEVEL 3 */
+		ul ul {
+			left:100%;
+			top:0;
+			li {
+				&.parent { // Styles applied to parent items in level 3
+				}
+			}
+		}
+		li:hover > ul {
+			visibility: visible;
+		}
+	}
+
+	/* 2. TOP NAVIGATION (Add top navigation presentational styles here) */
+	#top {
+		background: #000;
+		#top-nav {
+			margin-left: -1.618em;
+			display: block;
+			li {
+				a {
+					.text_shadow(0,0,0);
+				}
+			}
+		}
+		ul.nav {
+			padding: 0;
+			font-size:1em; // this adjusts the scale of the entire navigation and everything just works like magic
+			> li { // The following styles are applied ONLY to the top level list items
+				a {
+					color: #f0f0f0;
+					&:hover {
+						background: #111;
+					}
+				}
+				&:hover {
+					background: #111;
+				}
+			}
+			/* LEVEL 2 */
+			ul {
+				background: #111;
+				background: rgba(0,0,0,.9);
+				li {
+					a {
+					}
+				}
+			}
+			/* LEVEL 3 */
+			ul ul {
+			}
+			li:hover > ul {
+			}
+		}
+	}
+
+	/* 3. MAIN NAVIGATION DROPDOWN MENUS (Add main navigation presentational styles here) */
+	#navigation  {
+		display:block !important;
+		width: 70%;
+		float: right;
+		clear: none;
+		ul.nav {
+			float:right;
+			background: none;
+			.border_radius(0);
+			.inset_box_shadow(0, 0, 0, 0);
+			padding: 0;
+
+			> li { // The following styles are applied ONLY to the top level list items
+				a {
+					color: @color_nav;
+					.text_shadow(1px, 1px, 0, #fff);
+					&:hover {
+						color: darken(@color_nav, 34%);
+						text-decoration: none;
+					}
+				}
+			}
+			li {
+				&.current_page_item, &.current_page_parent, &.current-menu-ancestor, &.current-cat, &.li.current-menu-item {
+					a {
+						background: darken(@bg_light, 6%);
+						background: rgba(0, 0, 0, .02);
+						.border_radius(4px);
+						.inset_box_shadow(0, 0px, 6px, 1px, rgba(0, 0, 0, .05));
+					}
+					ul {
+						li {
+							a {
+								background: #f6f6f6;
+								.border_radius(0);
+								.inset_box_shadow(0, 0, 0, 0);
+							}
+						}
+					}
+				}
+				&.parent {
+					> a {
+						position: relative;
+						padding-right:1.8em;
+						&:after {
+							content: "";
+							display: block;
+							border:.3em solid #666;
+							border-color:#666 transparent transparent transparent;
+							position: absolute;
+							top:43%;
+							right:.8751em;
+						}
+					}
+				}
+			}
+			/* LEVEL 2 */
+			ul {
+				background: #f6f6f6;
+				border:1px solid darken(@border_main, 5%);
+				top: 24px;
+				left:-1px; // -1px left to offset the border and keep everything lined up
+				li {
+					border-bottom: 1px solid darken(@border_main, 5%);
+					&.current_page_item, &.current_page_parent, &.current-menu-ancestor, &.current-cat, &.li.current-menu-item {
+						.border_radius(0);
+					}
+					a {
+						font-family: @sans_google;
+						font-size: .9em;
+					}
+					&:last-child {
+						border-bottom: 0;
+					}
+
+				}
+			}
+			/* LEVEL 3 */
+			ul ul {
+				top:-1px;  // -1px top to offset the border and keep everything lined up
+				left:100%; // reapply left 100% as we're offsetting the first child by 1px
+			}
+			li:hover > ul {
+			}
+		}
+	}
+	// Hide the nav toggle link in desktop orientation
+	h3.nav-toggle {
+		display: none;
+	}
+
+	/* 4. CONTAINERS & COLUMNS */
+	#header #logo { float: left; }
+	#main.fullwidth, .layout-full #main, .col-full {
+		max-width:75.998em;
+		margin:0 auto;
+		width:100%;
+		padding: 0;
+	}
+	#main {
+		width: 62%; // golden ratio
+		margin: 0;
+	}
+
+	.post, .type-page, .type-features, .search-results .features, .search-results .page, .search-results .type-product, .search-results .type-portfolio {
+		.article-inner {
+			padding: 2.244em 2.244em 1.618em 9em;
+		}
+		.post-meta {
+			.post-avatar, .post-comments, .post-date { display: block; }
+		}
+	}
+	.type-page {
+		.article-inner {
+			padding-left: 2.244em;
+		}
+	}
+	#post-author {
+		padding: 1.387em 1.387em 2.244em 9em;
+	}
+	#post-entries {
+		padding: 0 2.244em 1.618em 9em;
+		margin: 0;
+	}
+	.post-share-bar {
+		clear: none;
+		position: absolute;
+		top: .326em;
+		left: 15.379em;
+		margin: 0;
+	}
+	.woo-pagination {
+		margin:0;
+	}
+	#comments {
+		h3 {
+			padding: 1.387em 1.387em 0 6.5em;
+		}
+		.comment {
+			.avatar {
+				float: left;
+				margin:0 1em 1em 1.387em;
+			}
+			.comment-entry {
+				float: right;
+				width: 83%;
+			}
+			&.depth-3 .comment-entry { width: 79%; }
+			&.depth-4 .comment-entry { width: 70%; }
+		}
+		ul.children {
+			margin:0 0 0 9em;
+		}
+	}
+	#respond  {
+		padding: 1.618em 1.618em 1.618em 9em;
+	}
+
+	#sidebar {
+		margin-top: 0;
+		width: 34%;  // golden ratio
+	}
+	.entry img {
+		max-width: 100%;
+	}
+	.layout-full .entry img {
+		max-width: 100%;
+	}
+	.layout-right-content {
+		#main  {
+			float: right;
+		}
+		#sidebar  {
+			float: left;
+		}
+	}
+	.layout-full #main  {
+		width: 100%; // full-width template
+	}
+	.single-portfolio {
+		&.layout-left-content {
+			#main {
+				article {
+					float:right;
+				}
+				.single-portfolio-gallery {
+					float: left;
+				}
+			}
+		}
+		&.layout-full {
+			#main {
+				article {
+					display: none;
+				}
+				.single-portfolio-gallery {
+					float: left;
+					width: 100%;
+				}
+			}
+		}
+	}
+	.col-left {
+		float: left;
+	}
+	.col-right {
+		float: right;
+	}
+	.page-template-template-contact-php {
+		.location-twitter  {
+			.col-left  {
+				float: left;
+			}
+			#office-location {
+			    width: 48%;
+			    margin: 0;
+			}
+			.contact-social  {
+			    float: right;
+			    width: 48%;
+			    #twitter  {
+			    	margin: 0;
+			    }
+			}
+		}
+	}
+
+	/* 4.1 Homepage */
+
+	// Section Title
+	.section-title p span {
+		display: inline;
+	}
+
+	// Nav inverted colors
+	.home {
+		#navigation  {
+			ul.nav {
+				> li { // The following styles are applied ONLY to the top level list items
+					a { color: @color_nav; }
+				}
+			}
+		}
+		#header { background: none; }
+		#sub-feature {
+			#social {
+				width: 15.379em;
+				margin: 0 4.236em 2.244em 0;
+			}
+			#features {
+				overflow: hidden;
+				ul {
+					li {
+						margin:0 5.63% 2.244em 0;
+						width: 29.58%;
+						&.clear {
+							margin: 0;
+							width: 0;
+						}
+					}
+				}
+			}
+		}
+		#home-widgets {
+			.block { float: left; }
+			&.columns-3 {
+				.block {
+					margin-right: 3.63%;
+					width: 30.91%;
+					&.home-widget-3 { margin-right: 0; }
+				}
+			}
+			&.columns-2 {
+				.block {
+					margin-right: 3.8%;
+					width: 48.1%;
+					&.home-widget-2 { margin-right: 0; }
+				}
+			}
+		}
+	}
+	#home-widget-fullwidth {
+		.widget_woo_newsfromblog {
+			h3 {
+				span {
+					max-width:30%;
+				}
+			}
+			.section-blog {
+				.flex-viewport {
+					margin-left:-2px;
+				}
+				ul {
+					li {
+						article {
+							width: 31.1%;
+							margin-right: 2.93%;
+							margin-left:2px;
+							&:nth-child(3) {
+								margin-right: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.has-slider {
+		#navigation  {
+			ul.nav {
+				> li { // The following styles are applied ONLY to the top level list items
+					a {
+						color: #fff;
+						.text_shadow(1px, 1px, 0, #000);
+						.text_shadow(1px, 1px, 0, rgba(0,0,0,.4));
+						&:hover {
+							color: #ccc;
+						}
+					}
+					ul li {
+						a {
+							color: @color_nav;
+							.text_shadow(0);
+							&:hover {
+								color: darken(@color_body, 33%);
+							}
+						}
+					}
+				}
+				li {
+					&.current_page_item, &.current_page_parent, &.current-menu-ancestor, &.current-cat, &.li.current-menu-item {
+						a {
+							background: rgba(0, 0, 0, .12);
+						}
+					}
+				}
+			}
+		}
+
+		// Slider/Header layout
+		body {
+			overflow-y: scroll;
+		}
+		#content-top {
+			position: fixed;
+			top: 0;
+			z-index: 0;
+			width: 100%;
+			background: none;
+		}
+		#header {
+			.vertical_gradient( rgba(0,0,0,.5) 0%, rgba(0,0,0, 0) 100%);
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+		#featured-wrap { position: absolute; top: 0; width:100%; }
+		#featured {
+			z-index: 1;
+			header {
+				h1 {
+					font-size: 2.618em;
+				}
+			}
+			.flex-control-nav  { display: block; }
+			ul.flex-direction-nav {
+				li {
+					a {
+						z-index: 99;
+						width: 5.874em;
+						height: 5.874em;
+						top:11.089em;
+					}
+				}
+			}
+			.slide {
+				.slide-content-container {
+					position: absolute;
+					top: 0;
+					padding-top: 11.089em;
+					width: 100%;
+					.entry {
+						font-size: 1.2em;
+					}
+				}
+				.slide-content {
+					padding: 0;
+				}
+				&.has-overlay .slide-content {
+					padding: 2.244em;
+					background: #000000;
+					background: rgba(0,0,0,.4);
+					/* MSIE */
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+					.border_radius(1em);
+				}
+			}
+		}
+		body.ie {
+			#featured {
+				.slide {
+					&.has-overlay .slide-content {
+						background-color:none !important;
+						background:transparent !important;
+						zoom: 1;
+						filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#50000000', endColorstr='#50000000'); /* IE */
+					}
+				}
+			}
+		}
+		#content { margin-top: 136px; }
+		#wrapper  {
+			z-index: 2;
+			position: relative;
+		}
+	}
+
+	body {
+		&.admin-bar {
+			&.has-slider {
+				#content-top {
+					top: 28px;
+				}
+			}
+		}
+	}
+
+	.section-title {
+		span {
+			max-width:80%;
+		}
+	}
+	/* PORTFOLIO TEMPLATE */
+	.single-portfolio {
+		.portfolio  { float: left; width:26%; }
+		.single-portfolio-gallery  { float: right; width: 70%; }
+		#content .portfolio-item {
+			margin: 1em 0 1.618em;
+		}
+	}
+	#porfolio-gallery {
+		.portfolio-item {
+			&.last {
+				margin-right: 1.618em !important;
+			}
+		}
+	}
+
+	/* 5. FOOTER WIDGETS */
+	#footer-widgets {
+		padding:2.618em 0;
+		.block {
+			margin-right:3.8%;
+			float: left;
+		}
+		&.col-1 {
+			.block {
+				width: 100%;
+				float: none;
+			}
+			.footer-widget-1 {
+				margin-right:0;
+			}
+		}
+		&.col-2 {
+			.block {
+				width: 48%;
+			}
+			.footer-widget-2 {
+				margin-right:0;
+			}
+		}
+		&.col-3 {
+			.block {
+				width: 30.75%;
+			}
+			.footer-widget-3 {
+				margin-right:0;
+			}
+		}
+		&.col-4 {
+			.block {
+				width: 22.05%
+			}
+			.footer-widget-4 {
+				margin-right:0;
+			}
+		}
+	}
+
+	/* 6. IE FIXES */
+
+	.ie7 {
+		#top-nav {
+			position: relative;
+			z-index: 9999999;
+		}
+		#header {
+			position: relative;
+			z-index: 9999999;
+		}
+	}
+
+}
+
+@media only screen and (max-device-width: 1024px) and (orientation:portrait) {
+    .widget_woo_newsfromblog {
+		.section-blog {
+			ul {
+				li {
+					article {
+						width: 248px;
+					}
+				}
+			}
+		}
+	}
+}

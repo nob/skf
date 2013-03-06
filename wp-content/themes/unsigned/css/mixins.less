@@ -1,0 +1,155 @@
+// VARIABLES
+// Colors
+@color_links: #871a1a; // Links / Main theme colour 
+@color_body: #878484; // Body Copy
+@color_contrast: #ee3030;
+@color_contrast2: #0a4b74;
+// Borders
+@border_main: #201f1f; // The 1px grey rules used throughout the WF
+// Backgrounds
+@bg_light: #fafafa;
+@bg_dark: #020202;
+// Fonts
+@sans: "PT Sans", sans-serif;
+@serif: "Kreon", serif; 
+// Google fonts - These are also defined in Theme Setup (theme-actions.php)
+@sans_google: "Droid Sans", sans-serif;
+@serif_google: "Droid Serif", sans-serif;
+
+// CUSTOM MIXINS
+.background {
+	.border_radius(4px); 
+	border: 1px solid @border_main; 
+	.box_shadow;
+}
+
+.no-background {
+	background: rgba(0, 0, 0, 0);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#00000000", endColorstr="#00000000",GradientType=0 );
+	.box_shadow(0,0,0,0,rgba(0,0,0,0));
+	border: none;
+	.border_radius(0px);
+}
+
+// MIXINS
+.border_radius(@radius:10px)
+{
+    -webkit-border-radius:@radius;
+    -moz-border-radius:@radius;
+    border-radius:@radius;
+}
+
+.border_radius_right(@radius:10px)
+{
+    -webkit-border-top-right-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-radius-topright: @radius;
+    -moz-border-radius-bottomright: @radius;
+    border-top-right-radius: @radius;
+    border-bottom-right-radius: @radius;
+}
+
+.border_radius_left(@radius:10px)
+{
+    -webkit-border-top-left-radius: @radius;
+    -webkit-border-bottom-left-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    border-top-left-radius: @radius;
+    border-bottom-left-radius: @radius;
+}
+
+.border_radius_bottom(@radius:10px)
+{
+    -webkit-border-bottom-left-radius: @radius;
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    -moz-border-radius-bottomright: @radius;
+    border-bottom-left-radius: @radius;
+    border-bottom-right-radius: @radius;
+}
+
+.border_radius_top(@radius:10px)
+{
+    -webkit-border-top-left-radius: @radius;
+    -webkit-border-top-right-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    -moz-border-radius-topright: @radius;
+    border-top-left-radius: @radius;
+    border-top-right-radius: @radius;
+}
+
+.box_shadow(@shadow_x:0px, @shadow_y:-1px, @shadow_rad:0px, @shadow_in:0px, @shadow_color:#3b3a3a)
+{
+    box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -webkit-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -moz-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -o-box-shadow:@shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+}
+
+.inset_box_shadow(@shadow_x:3px, @shadow_y:3px, @shadow_rad:3px, @shadow_in:3px, @shadow_color:#888)
+{
+    box-shadow:inset @shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -webkit-box-shadow:inset @shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -moz-box-shadow:inset @shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+    -o-box-shadow:inset @shadow_x @shadow_y @shadow_rad @shadow_in @shadow_color;
+}
+ 
+.text_shadow(@shadow_x:0px, @shadow_y:1px, @shadow_rad:1px, @shadow_color:#000)
+{
+    text-shadow:@shadow_x @shadow_y @shadow_rad @shadow_color;
+}
+
+.vertical_gradient(@from: #b62323, @to: #7a1717) {
+	background: @from;
+    background-image: url(images/noise.png),-webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+    background-image: url(images/noise.png),-webkit-linear-gradient(@from, @to);
+    background-image: url(images/noise.png),-moz-linear-gradient(center top, @from 0%, @to 100%);
+    background-image: url(images/noise.png),-moz-gradient(center top, @from 0%, @to 100%);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=%d,endColorstr=%d)", @from, @to));
+	-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=%d, endColorstr=%d)", @from, @to);
+}
+
+.transition(@selector:all, @animation:ease-in-out, @duration:.2s) {
+    -webkit-transition:@selector @animation @duration;
+    -moz-transition:@selector @animation @duration;
+    -o-transition:@selector @animation @duration;
+    transition:@selector @animation @duration;
+}
+ 
+.opacity(@opacity:0.75) {
+    filter:~"alpha(opacity=@opacity * 100)";
+    -moz-opacity:@opacity;
+    -khtml-opacity: @opacity;
+    opacity: @opacity;
+}
+
+.rgba(@red: 0, @green: 0, @blue: 0, @alpha: .7, @iehex: "#80000000") {  
+    background:transparent;  
+    background: rgba(@red, @green, @blue, @alpha);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@iehex, endColorstr=@iehex,GradientType=0 );
+    zoom: 1;  
+}
+
+.rotate(@degree:1deg) {
+	-webkit-transform:rotate(@degree);
+	-moz-transform:rotate(@degree);
+}
+
+.scale(@ratio:1.5){
+  -webkit-transform:scale(@ratio);
+  -moz-transform:scale(@ratio);
+  transform:scale(@ratio);
+}
+
+.radial_gradient(@from: #000, @to: #FFF) {
+	background: @from;
+    background: -webkit-gradient(radial, 50% 10%, 0, 50% 10%, 1000, from(@from), to(@to));
+    background: -moz-radial-gradient(center top, @from 0%, @to 100%);
+}
+
+.borderbox () {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}

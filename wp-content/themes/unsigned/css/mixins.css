@@ -1,0 +1,22 @@
+.background {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #201f1f;
+  box-shadow: 0px -1px 0px 0px #3b3a3a;
+  -webkit-box-shadow: 0px -1px 0px 0px #3b3a3a;
+  -moz-box-shadow: 0px -1px 0px 0px #3b3a3a;
+  -o-box-shadow: 0px -1px 0px 0px #3b3a3a;
+}
+.no-background {
+  background: rgba(0, 0, 0, 0);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr="#00000000", endColorstr="#00000000", GradientType=0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -o-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  border: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}

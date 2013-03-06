@@ -1,0 +1,545 @@
+/*
+The styles in this stylesheet only apply to resolutions 768px and up
+
+CALCULATING DIMENSIONS:
+----------------------
+The layout is fluid. The sote wrapper (.col-full) has a fixed pixel max-width.
+All subsequent dimensions are calculated based on that fixed pixel width, using the formula: target / context = result
+Credit - http://www.alistapart.com/articles/fluidgrids/
+
+-----
+INDEX
+-----
+
+1. Top Navigation
+2. Main navigation dropdown menus
+3. Containers & Columns
+4. Footer widgets
+5. WooCommerce
+*/
+/*----------------------*/
+.background {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #201f1f;
+  box-shadow: 0px -1px 0px 0px #3b3a3a;
+  -webkit-box-shadow: 0px -1px 0px 0px #3b3a3a;
+  -moz-box-shadow: 0px -1px 0px 0px #3b3a3a;
+  -o-box-shadow: 0px -1px 0px 0px #3b3a3a;
+}
+.no-background {
+  background: rgba(0, 0, 0, 0);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr="#00000000", endColorstr="#00000000", GradientType=0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -o-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  border: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+/*----------------------*/
+#wrapper {
+  padding: 0 20px;
+}
+@media only screen and (min-width: 768px) {
+  /* 1. TOP NAVIGATION */
+  #top {
+    background: #000;
+    margin: 0 -20px;
+  }
+  #top #top-nav {
+    display: block;
+  }
+  #top .nav a {
+    color: #ddd;
+    padding: 8px 10px;
+    line-height: 1.4;
+    text-decoration: none;
+    text-shadow: none;
+  }
+  #top .nav a:hover {
+    background: #222;
+  }
+  #top .nav li {
+    position: relative;
+  }
+  #top .nav li.current_page_item a,
+  #top .nav li.current_page_parent a,
+  #top .nav li.current-menu-ancestor a,
+  #top .nav li.current-cat a,
+  #top .nav li.li.current-menu-item a {
+    background: #222;
+  }
+  #top .nav li:hover > a,
+  #top .nav li a:hover {
+    background: #222;
+  }
+  #top .nav li.parent > a {
+    position: relative;
+    padding-right: 2em;
+  }
+  #top .nav li.parent > a:after {
+    content: "";
+    display: block;
+    border: 0.3em solid #871a1a;
+    border-color: #871a1a transparent transparent transparent;
+    position: absolute;
+    top: 48%;
+    right: .8751em;
+  }
+  #top .nav li ul {
+    background: #222;
+    margin: 0;
+    padding: 0px;
+    width: 180px;
+    border: none;
+    z-index: 999;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    position: absolute;
+  }
+  #top .nav li ul:last-child a {
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  #top .nav li ul li a {
+    padding: 8px 10px;
+    width: 160px;
+    color: #ddd;
+    background: none;
+    font-size: 0.9em;
+  }
+  #top .nav li ul li a:hover {
+    background: black;
+  }
+  #top .nav li ul li.parent a {
+    padding-right: 10px;
+  }
+  #top .nav li ul li.parent a:after {
+    border-color: transparent transparent transparent #871a1a;
+    right: 10px;
+    top: 46%;
+  }
+  #top .nav li ul li ul {
+    margin: -31px 0 0 180px;
+  }
+  /* 2. MAIN NAVIGATION DROPDOWN MENUS */
+  h3.nav-toggle {
+    display: none;
+  }
+  #navigation {
+    display: block !important;
+  }
+  #navigation .nav li.parent > a {
+    position: relative;
+    padding-right: 2em;
+  }
+  #navigation .nav li.parent > a:after {
+    content: "";
+    display: block;
+    border: 0.3em solid #871a1a;
+    border-color: #871a1a transparent transparent transparent;
+    position: absolute;
+    top: 48%;
+    right: .8751em;
+  }
+  #navigation .nav li:first-child a {
+    border-left: none;
+  }
+  #navigation .nav li ul {
+    margin: 0 0 0 -1px;
+    padding: 0 15px;
+    position: absolute;
+    width: 180px;
+    border: 1px solid #131212;
+    z-index: 999;
+  }
+  #navigation .nav li ul li a {
+    padding: 10px 0px;
+    width: 180px;
+    background: none;
+    font-size: 0.8em;
+    color: #FFFFFF;
+    border: none;
+    text-transform: none;
+  }
+  #navigation .nav li ul li a:hover {
+    color: #871a1a;
+    background: none;
+  }
+  #navigation .nav li ul li.current_page_item a,
+  #navigation .nav li ul li.current_page_parent a,
+  #navigation .nav li ul li.current-menu-ancestor a,
+  #navigation .nav li ul li.current-cat a,
+  #navigation .nav li ul li.li.current-menu-item a {
+    background: none;
+  }
+  #navigation .nav li ul li.parent a {
+    padding-right: 0;
+  }
+  #navigation .nav li ul li.parent a:after {
+    border-color: transparent transparent transparent #871a1a;
+    right: 0;
+    top: 46%;
+  }
+  #navigation .nav li ul li:last-child {
+    border-bottom: none;
+  }
+  #navigation .nav li ul ul {
+    margin: -37px 0 0 180px;
+  }
+  /* 2.1 GENERAL DROPDOWN MENUS */
+  .nav li ul {
+    position: absolute;
+    display: none;
+    overflow: hidden;
+  }
+  .nav li:hover ul ul,
+  .nav li:hover ul ul ul,
+  .nav li:hover ul ul ul ul {
+    display: none;
+    overflow: hidden;
+  }
+  .nav li:hover ul,
+  .nav li li:hover ul,
+  .nav li li li:hover ul,
+  .nav li li li li:hover ul {
+    display: block;
+    overflow: visible;
+  }
+  /* 3. CONTAINERS & COLUMNS */
+  #main.fullwidth,
+  .layout-full #main,
+  .col-full {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  #main {
+    width: 65.62%;
+    /* 630 / 960 = 0.6562 */
+  }
+  #main.fullwidth {
+    width: 100%;
+  }
+  #sidebar {
+    margin-top: 0;
+    width: 31.25%;
+    /* 300 / 960 = 0.3125 */
+  }
+  .entry img {
+    max-width: 100%;
+  }
+  .layout-full .entry img {
+    max-width: 100%;
+  }
+  .layout-right-content #main {
+    float: right;
+  }
+  .layout-right-content #sidebar {
+    float: left;
+  }
+  .layout-full #main {
+    width: 100%;
+  }
+  .col-left {
+    float: left;
+  }
+  .col-right {
+    float: right;
+  }
+  /* 4. FOOTER WIDGETS */
+  #footer-widgets .block {
+    margin-right: 2.08%;
+    /* 20 / 960 = 0.0208 */
+    float: left;
+  }
+  #footer-widgets.col-1 .block {
+    width: 100%;
+    float: none;
+  }
+  #footer-widgets.col-1 .footer-widget-1 {
+    margin-right: 0;
+  }
+  #footer-widgets.col-2 .block {
+    width: 48.96%;
+    /* 470 / 960 = 0.4896 */
+  }
+  #footer-widgets.col-2 .footer-widget-2 {
+    margin-right: 0;
+  }
+  #footer-widgets.col-3 .block {
+    width: 31.86%;
+    /* 306 / 960 = 0.3186 */
+  }
+  #footer-widgets.col-3 .footer-widget-3 {
+    margin-right: 0;
+  }
+  #footer-widgets.col-4 .block {
+    width: 23.44%;
+    /* 225 / 960 = 0.2344 */
+  }
+  #footer-widgets.col-4 .footer-widget-4 {
+    margin-right: 0;
+  }
+  /* 5. WooCommerce */
+  /* Full-width WooCommerce Tabs */
+  .layout-full .woocommerce_tabs,
+  .layout-full .woocommerce-tabs {
+    width: auto;
+  }
+  .layout-full .related,
+  .layout-full .upsells {
+    width: 48%;
+  }
+  .layout-full .related {
+    float: left;
+  }
+  .layout-full .upsells {
+    float: right;
+  }
+  .layout-full .upsells ul {
+    width: 100%;
+    float: left;
+  }
+  /* Forms */
+  div.form-row {
+    margin-bottom: 10px;
+  }
+  .form-row {
+    width: 48%;
+    float: left;
+  }
+  .form-row label {
+    display: block;
+  }
+  .form-row input[type=checkbox] + label {
+    display: inline;
+  }
+  .form-row.notes,
+  .form-row.message {
+    width: 100%;
+  }
+  .form-row.notes textarea,
+  .form-row.message textarea {
+    width: 100%;
+  }
+  .form-row.submit {
+    clear: both;
+  }
+  .form-row-first {
+    clear: left;
+  }
+  .form-row-last {
+    float: right;
+  }
+  .form-row-wide {
+    float: left;
+    width: 100%;
+    clear: left;
+  }
+  .col2-set {
+    clear: both;
+  }
+  .col2-set .col-1 {
+    width: 48%;
+    float: left;
+  }
+  .col2-set .col-2 {
+    width: 48%;
+    float: right;
+  }
+  .col2-set:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  /* Checkout */
+  form.login {
+    overflow: hidden;
+    zoom: 1;
+  }
+  #customer_details .col-1,
+  #customer_details .col-2 {
+    width: 46%;
+  }
+  #customer_details .col-1 {
+    padding-right: 4%;
+    border-right: 1px solid #201f1f;
+  }
+  table.shop_table dl.variation {
+    overflow: hidden;
+    zoom: 1;
+  }
+  table.shop_table dl.variation dt {
+    float: left;
+    clear: left;
+    margin-right: .436em;
+    font-weight: 700;
+  }
+  table.shop_table dl.variation dd {
+    float: left;
+  }
+  /* Shopping Cart */
+  table.cart td.actions .coupon {
+    text-align: left;
+    width: 60%;
+    float: left;
+    margin-bottom: 0;
+  }
+  table.cart td.actions .coupon input,
+  table.cart td.actions .coupon .button {
+    float: none;
+  }
+  table.cart td.actions .coupon input {
+    margin-bottom: 6px;
+    width: auto;
+  }
+  table.cart td.actions .coupon .button {
+    width: 40%;
+  }
+  table.cart td.actions .button,
+  table.cart td.actions .checkout-button {
+    width: auto;
+    text-align: center;
+    padding: 0.45em 1em;
+  }
+  table.cart .button {
+    margin: 0 0 10px;
+  }
+  table.cart .product-quantity .plus,
+  table.cart .product-quantity .minus {
+    display: inline-block;
+  }
+  .cart-collaterals {
+    float: left;
+    width: 100%;
+    margin-top: 2em;
+  }
+  .cart-collaterals .cross-sells,
+  .cart-collaterals .cart_totals {
+    width: 48%;
+    float: right;
+  }
+  .cart-collaterals .cross-sells {
+    float: left;
+  }
+  .cart-collaterals .cross-sells ul.products li {
+    width: 48%;
+    margin-right: 3.8%;
+  }
+  .cart-collaterals .cross-sells ul.products li:nth-child(2n) {
+    margin-right: 0;
+  }
+  .cart-collaterals .cross-sells ul.products li.last {
+    margin-right: 3.8%;
+  }
+  .cart-collaterals .shipping_calculator {
+    clear: left;
+    float: left;
+  }
+  .cart-collaterals .shipping_calculator input {
+    width: 100%;
+  }
+  /* Products */
+  ul.products li.product {
+    width: 22.05%;
+    margin-right: 3%;
+    margin-bottom: 1em;
+    clear: none;
+  }
+  ul.products li.product:nth-child(2n) {
+    float: left;
+  }
+  ul.products li.product img {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+  ul.products li.product .button {
+    font-size: 0.95em;
+    line-height: 1;
+    padding: 5px 10px 4px;
+  }
+  ul.products li.product.first {
+    clear: left;
+  }
+  ul.products li.product.last {
+    margin-right: 0 !important;
+  }
+  /* Single Product */
+  .single-product .product .images {
+    width: 48%;
+    margin-right: 3.8%;
+    float: left;
+  }
+  .single-product .product .summary {
+    width: 48%;
+    float: right;
+  }
+  .single-product .product .woocommerce_tabs ul.tabs,
+  .single-product .product .woocommerce-tabs ul.tabs {
+    margin: 0;
+  }
+  .single-product .product .woocommerce_tabs ul.tabs li,
+  .single-product .product .woocommerce-tabs ul.tabs li {
+    width: auto;
+    margin-right: .618em;
+  }
+  .single-product .product .woocommerce_tabs ul.tabs li:nth-child(2n),
+  .single-product .product .woocommerce-tabs ul.tabs li:nth-child(2n) {
+    float: left;
+  }
+  .single-product .product .woocommerce_tabs ul.tabs li a,
+  .single-product .product .woocommerce-tabs ul.tabs li a {
+    padding: 5px 20px;
+  }
+  .single-product .product .woocommerce_tabs,
+  .single-product .product .woocommerce-tabs,
+  .single-product .product .related-products {
+    clear: both;
+  }
+  .single-product .related li.product,
+  .single-product .upsells li.product {
+    width: 30%;
+  }
+  /* Product pagination / page ordering */
+  .woocommerce .woo-pagination,
+  .woocommerce .woocommerce_ordering,
+  .woocommerce .woocommerce-ordering {
+    width: 48%;
+  }
+  .woocommerce .woocommerce_ordering,
+  .woocommerce .woocommerce-ordering {
+    float: right;
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+  .ie .woocommerce_ordering,
+  .ie .woocommerce-ordering {
+    width: 40%;
+  }
+  /* 6. IE FIXES */
+  .ie7 #top-nav {
+    position: relative;
+    z-index: 9999999;
+  }
+  .ie7 .nav li.parent > a {
+    padding-right: 15px !important;
+  }
+}

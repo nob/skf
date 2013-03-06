@@ -1,0 +1,227 @@
+// GREEN ALT STYLE
+/* Imports */
+@import url(../css/mixins.less);
+
+// Colors
+@color_links: #3B9C7B; // Links / Main theme colour
+@color_links_alt: #2D7E6D;
+@color_body: #9E9E9E; // Body Copy
+@color_footer: #E4E4E4;
+@color_nav: #939393;
+@color_sub_features: #ccc;
+// Borders
+@border_main: #f0f0f0; // The 1px grey rules used throughout the WF
+// Backgrounds
+@bg_light: #EBF4E1;
+@bg_dark: #323232;
+@bg_footer_widgets: #FFFFFF;
+@bg_respond: #F5FAEE;
+// Widget Title
+@widget_title: #2D7E6D;
+
+/* Body */
+body  { 
+	color: @color_body;
+	background: @bg_dark;
+}
+
+/* General Links */
+a { 
+	color: @color_links;	
+	&:hover {
+		color: @color_links - #222;
+	}
+}
+
+/* Main Wrapper */
+#content { background:none; }
+#content-top { background: @bg_light; }
+#wrapper { background: @bg_light; }
+
+/* Sub-Feature */
+#sub-feature {
+	background: @bg_footer_widgets;
+	border-bottom: 1px solid @bg_light;
+	.box_shadow(0, 1px, 0, 0, @bg_light);
+	color: @color_sub_features;
+	#social {
+		h3 {
+			color: @color_sub_features - #333;
+		}
+	}
+	#features {
+		ul  {
+			li {
+				h2 {
+					a {
+						color: @color_sub_features - #333;
+					}
+				}
+				a.read-more {
+					background-color: @color_links_alt;
+					&:hover {
+						background-color: @color_links_alt - #333;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Footer */
+#footer {
+	background: @bg_dark;
+}
+
+/* Footer Widgets */
+#footer-widgets-container {
+	background: @bg_footer_widgets;
+	border-top: 1px solid @bg_light;
+	#footer-widgets {
+		.widget {
+			color: @color_sub_features;
+			a {
+				color: @color_sub_features;
+			}
+			h3 {
+				color: @widget_title;
+			}
+			background: none;
+		}
+	}
+}
+
+/* Homepage Section Title */
+.section-title {
+	p {
+		&:before {
+			.double_border(@border_main);
+		}
+		span {
+			background: @bg_light;
+		}
+	}
+}
+
+/* Home Widgets */
+#home-widgets {
+	.block {
+		a {
+			color: @color_links;
+		}
+	}
+}
+
+/* Global Widgets */
+.widget {
+	h3 {
+		color: @color_links;
+	}
+}
+
+/* Dojo Tabs */
+.widget_woodojo_tabs {
+	.nav { 
+		li {
+			a {
+				color: @color_links;
+			}
+			&.active {
+				a {
+					color: @color_links !important;
+				}
+			}
+		}
+	}
+	.tab-content {
+		ul {
+			padding: 0 !important;
+			li {
+				a {
+					color: @color_links;
+				}
+			}
+		}
+	}
+}
+
+/* News From Blog Widget */
+.widget_woo_newsfromblog {
+	h3 {
+		color: @color_body;
+		&:before {
+			.double_border(@border_main);
+		}
+		span {
+			background: @bg_light;
+		}	
+	}
+	.section-blog {
+		ul {
+			li {
+				.post-more {
+					a {
+						color: @color_links;
+					}
+				}
+			}
+		}
+	}
+	.flexslider-nav-container {
+		ul {
+			background: @bg_light;
+		}
+		&:before {
+			.double_border(@border_main);
+		}
+	}
+}
+
+/* Post Meta Badge */
+.post .post-meta .post-comments a, .type-page .post-meta .post-comments a, .type-features .post-meta .post-comments a, .search-results .features .post-meta .post-comments a, .search-results .page .post-meta .post-comments a, .search-results .type-product .post-meta .post-comments a, .search-results .type-portfolio .post-meta .post-comments a {
+	background: @color_links_alt;
+	&:hover {
+		background-color: @color_links_alt - #333;
+	}
+}
+
+/* Comments Respond */
+#respond  {
+	background: @bg_respond;
+	border-color: darken(@bg_respond - #111, 5%);
+	label { 
+		color: lighten(@color_body, 10%); 
+	}
+	#reply-title {
+		color: darken(@bg_respond - #444, 20%);
+	}
+	#commentform  {
+		label { 
+			color: darken(@bg_respond - #444, 20%);
+		}
+	}
+}
+
+/* Portfolio */
+#portfolio-gallery {
+	#port-tags {
+		a {
+			background: @color_links_alt;
+			&:before{
+				border-color:transparent @color_links_alt transparent transparent;
+			}
+		}
+	}
+}
+
+/* Buttons */
+a.button, 
+a.comment-reply-link, 
+#commentform #submit,
+.submit,
+input[type=submit],
+input.button,
+button.button {
+	background: @color_links_alt;
+	&:hover { background: @color_links_alt; }
+}

@@ -1,0 +1,195 @@
+/* Imports */
+/* Body */
+body {
+  color: #9e9e9e;
+  background: #323232;
+}
+/* General Links */
+a {
+  color: #3b9c7b;
+}
+a:hover {
+  color: #197a59;
+}
+/* Main Wrapper */
+#content {
+  background: none;
+}
+#content-top {
+  background: #ebf4e1;
+}
+#wrapper {
+  background: #ebf4e1;
+}
+/* Sub-Feature */
+#sub-feature {
+  background: #ffffff;
+  border-bottom: 1px solid #ebf4e1;
+  box-shadow: 0 1px 0 0 #ebf4e1;
+  -webkit-box-shadow: 0 1px 0 0 #ebf4e1;
+  color: #cccccc;
+}
+#sub-feature #social h3 {
+  color: #999999;
+}
+#sub-feature #features ul li h2 a {
+  color: #999999;
+}
+#sub-feature #features ul li a.read-more {
+  background-color: #2d7e6d;
+}
+#sub-feature #features ul li a.read-more:hover {
+  background-color: #004b3a;
+}
+/* Footer */
+#footer {
+  background: #323232;
+}
+/* Footer Widgets */
+#footer-widgets-container {
+  background: #ffffff;
+  border-top: 1px solid #ebf4e1;
+}
+#footer-widgets-container #footer-widgets .widget {
+  color: #cccccc;
+  background: none;
+}
+#footer-widgets-container #footer-widgets .widget a {
+  color: #cccccc;
+}
+#footer-widgets-container #footer-widgets .widget h3 {
+  color: #2d7e6d;
+}
+/* Homepage Section Title */
+.section-title p:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #e3e3e3;
+  box-shadow: 0 1px 0 0 #ffffff;
+  -webkit-box-shadow: 0 1px 0 0 #ffffff;
+  display: block;
+  position: absolute;
+  top: 49%;
+  z-index: -999;
+}
+.section-title p span {
+  background: #ebf4e1;
+}
+/* Home Widgets */
+#home-widgets .block a {
+  color: #3b9c7b;
+}
+/* Global Widgets */
+.widget h3 {
+  color: #3b9c7b;
+}
+/* Dojo Tabs */
+.widget_woodojo_tabs .nav li a {
+  color: #3b9c7b;
+}
+.widget_woodojo_tabs .nav li.active a {
+  color: #3b9c7b !important;
+}
+.widget_woodojo_tabs .tab-content ul {
+  padding: 0 !important;
+}
+.widget_woodojo_tabs .tab-content ul li a {
+  color: #3b9c7b;
+}
+/* News From Blog Widget */
+.widget_woo_newsfromblog h3 {
+  color: #9e9e9e;
+}
+.widget_woo_newsfromblog h3:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #e3e3e3;
+  box-shadow: 0 1px 0 0 #ffffff;
+  -webkit-box-shadow: 0 1px 0 0 #ffffff;
+  display: block;
+  position: absolute;
+  top: 49%;
+  z-index: -999;
+}
+.widget_woo_newsfromblog h3 span {
+  background: #ebf4e1;
+}
+.widget_woo_newsfromblog .section-blog ul li .post-more a {
+  color: #3b9c7b;
+}
+.widget_woo_newsfromblog .flexslider-nav-container ul {
+  background: #ebf4e1;
+}
+.widget_woo_newsfromblog .flexslider-nav-container:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #e3e3e3;
+  box-shadow: 0 1px 0 0 #ffffff;
+  -webkit-box-shadow: 0 1px 0 0 #ffffff;
+  display: block;
+  position: absolute;
+  top: 49%;
+  z-index: -999;
+}
+/* Post Meta Badge */
+.post .post-meta .post-comments a,
+.type-page .post-meta .post-comments a,
+.type-features .post-meta .post-comments a,
+.search-results .features .post-meta .post-comments a,
+.search-results .page .post-meta .post-comments a,
+.search-results .type-product .post-meta .post-comments a,
+.search-results .type-portfolio .post-meta .post-comments a {
+  background: #2d7e6d;
+}
+.post .post-meta .post-comments a:hover,
+.type-page .post-meta .post-comments a:hover,
+.type-features .post-meta .post-comments a:hover,
+.search-results .features .post-meta .post-comments a:hover,
+.search-results .page .post-meta .post-comments a:hover,
+.search-results .type-product .post-meta .post-comments a:hover,
+.search-results .type-portfolio .post-meta .post-comments a:hover {
+  background-color: #004b3a;
+}
+/* Comments Respond */
+#respond {
+  background: #f5faee;
+  border-color: #d8dfce;
+}
+#respond label {
+  color: #b8b8b8;
+}
+#respond #reply-title {
+  color: #7f8674;
+}
+#respond #commentform label {
+  color: #7f8674;
+}
+/* Portfolio */
+#portfolio-gallery #port-tags a {
+  background: #2d7e6d;
+}
+#portfolio-gallery #port-tags a:before {
+  border-color: transparent #2d7e6d transparent transparent;
+}
+/* Buttons */
+a.button,
+a.comment-reply-link,
+#commentform #submit,
+.submit,
+input[type=submit],
+input.button,
+button.button {
+  background: #2d7e6d;
+}
+a.button:hover,
+a.comment-reply-link:hover,
+#commentform #submit:hover,
+.submit:hover,
+input[type=submit]:hover,
+input.button:hover,
+button.button:hover {
+  background: #2d7e6d;
+}

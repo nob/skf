@@ -1,0 +1,830 @@
+// RED
+@import url(../css/mixins.less);
+
+// Colors
+@color_links: #951F2B; // Links / Main theme colour 
+@color_body: #818181; // Body Copy
+@color_nav: #fff;
+@color_buttons: #951F2B;
+@color_buttons2: #94b52e;
+@color_headings: #333;
+@color_links_widgets: #818181;
+@color_slider: #fff;
+
+// Backgrounds
+@bg_light: #fafafa;
+@bg_dark: #d3d3d3;
+@bg_top: #951F2B;
+@bg_bottom: #f1f1f1;
+
+// Borders
+@border_top: @bg_top - #222;
+
+@imagepath: 'images';
+
+/*-------------------------------------------------------------------------------------------*/
+/* 1. SETUP */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 1.1 Defaults */
+body  {
+	color: @color_body;
+	font-family: @sans;
+}
+
+hr { background-color: @border_main; }
+
+/* 1.2 Hyperlinks */
+
+a { 
+	color: @color_links; 
+	&:hover {
+		color: @color_links - #222;
+	}
+}
+
+/* 1.3 Typography */
+
+h1, h2, h3, h4, h5, h6  {
+	font-family: @sans; 
+	color: @color_headings;
+}
+
+/* 1.4 Tables */
+// TABLES
+table {
+    border:1px solid @border_main;
+    .box_shadow(0,1px,2px,0,@border_main + #242424);
+    td,th {
+      border-right:1px dotted @border_main;
+    }
+    thead {
+      th {
+        border-right:1px dotted @bg_light - #111;
+        border-bottom:1px solid @border_main;
+        &:first-child {
+          .border_radius_left(4px);
+          .border_radius_bottom(0);
+        }
+        &:last-child {
+          .border_radius_right(4px);
+          .border_radius_bottom(0);
+        }
+      }
+    }
+    tr {
+      th:last-child, td:last-child {
+        border-right:0;
+      }
+    }
+    tbody {
+      th {
+      	border-bottom:1px solid @border_main;
+      }
+      tr:nth-child(2n) {
+        td {
+          border-right:1px dotted @bg_light - #111;
+        }
+      }
+      td {
+        border-bottom:1px solid @border_main;
+        -webkit-box-shadow:
+          inset 0 1px 0 0 @bg_light,
+          inset 0 -1px 0 #fff;
+        box-shadow:
+          inset 0 1px 0 0 @bg_light,
+          inset 0 -1px 0 #fff;
+      }
+    }
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* 2. SITE STRUCTURE & APPEARANCE */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 2.2 Navigation */
+ul.nav { // Styles applied to all instances of navigation
+	li {
+		&.current_page_item, &.current_page_parent, &.current-menu-ancestor, &.current-cat, &.li.current-menu-item {
+			a { 
+				background: darken( @bg_top, 8% ); 
+			}
+		}
+	}
+}
+
+#navigation{ 
+	background: darken( @bg_top, 8% );
+	ul {
+		li {
+			a {
+				border-bottom: 1px solid darken(@border_top, 18%);
+				color: @color_nav;
+			}
+		}
+	}
+}
+	
+/* 2.2.2 Top Navigation (optional) */
+#top {
+	background: @bg_top;	
+}
+	
+/* 2.3 Header */
+#header {
+	background: @bg_top;
+	.nav-toggle {
+		&:after {
+			background: @bg_top + #222;
+			.border_radius(2px);
+		}		
+	}
+	.site-description { 
+		color: lighten(@color_body, 10%); 
+		font-family: @serif_google; 
+	}
+}
+#top-section {
+	background: @bg_top + #222;
+	border: 1px solid @bg_top + #333;
+	header {
+		h1 {
+			font-family: @headings_font;
+			.text_shadow( 1px, -1px, 0, lighten(@bg_top, 10%) );
+		}
+	}
+}
+
+/* 2.6 Footer */
+#footer-wrapper {
+	background: @bg_bottom;
+	border-top: 1px solid darken(@border_main, 10%);
+	.inset_box_shadow( 0, 1px, 5px, 1px, darken(@bg_bottom, 10%));
+}
+#footer{
+	color: @color_body - #111;
+	#footer-nav {
+		li {
+			border-right: 1px solid @border_main;
+			a {
+				color: darken(@color_body, 31%);
+			}
+		}
+	}
+}
+
+#footer-widgets {
+	border-bottom: 1px solid darken(@border_main, 7%);
+	h3 {
+		font-family: @headings_font;
+	}
+}
+
+#footer-widgets, #footer-right {
+	.widget_woothemes_features {
+		.feature {
+			border-bottom:1px solid darken(@border_main, 7%);
+		}
+	}
+	.widget_woodojo_tweets {
+		ul {
+			li {
+				border-bottom:1px solid darken(@border_main, 7%);
+			}
+		}
+	}
+	.widget_woothemes_testimonials {
+		h2 {
+			font-family: @headings_font;
+		}
+		.quote {
+			border-bottom:1px solid darken(@border_main, 7%);
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 3. POSTS */
+/*-------------------------------------------------------------------------------------------*/
+.archive-header {
+	border-bottom:@border_main 1px solid;
+}
+
+.post, .type-page {
+	border-bottom: 1px solid @border_main;
+	h1, h2, h3, h4, h5, h6 {
+		font-family: @headings_font;
+	}
+	header h1 {
+		a:link, a:visited { 
+			color: darken(@color_body, 31%);
+		}
+	}
+	.post-meta {
+		color: lighten(@color_body, 15%);
+		.img-wrap {
+			border: 1px solid @border_main;
+			.box_shadow(0, 1px, 1px, 0, lighten(@color_body, 45%));
+		}
+		li  { 
+			a {
+				color: darken(@color_body, 15%);
+			}
+			&.post-author {
+				a { color: @color_links; }
+			}
+		}
+	}
+	.entry {
+		blockquote  {
+			&:before  {
+				font-family: @serif;
+			}
+		}
+	}
+	
+	/* 3.1 Images */
+	img, img.thumbnail {
+		border:1px solid @border_main; 
+		.box_shadow(1px, 1px, 0, 0, @border_main);
+		&:hover { 
+			border-color: darken(@border_main, 5%);
+		}
+	}
+	.wp-caption {
+		background: @bg_light;
+		border: 1px solid @border_main;
+	}
+}
+
+
+/* 3.2 Pagination / WP-Pagenavi / Woo-Pagination */
+.nav-entries {
+	a {
+		color: @color_body;
+	}
+}
+.woo-pagination {	
+	.page-numbers {
+		color: darken(@color_body, 18%);
+		.box_shadow(0 1px 2px 0 rgba(0,0,0,0.1));
+		&.current  {
+			background: @color_buttons;
+		}
+	}
+}
+
+/* 3.3 Single Post Author */
+#post-author { 
+	background: @bg_light;
+	.box_shadow(2px, 2px, 1px, 0, @border_main);
+	border: 1px solid @border_main + #111;
+	.profile-image { 
+		border:1px solid @border_main; 
+	}
+}
+
+/* 3.4 Post Entry Nav */
+#post-entries {
+	border-bottom: 1px solid @border_main;
+}
+
+/* 3.5 Connect */
+#connect { 
+	background: @bg_light;
+	.box_shadow(2px, 2px, 1px, 0, @border_main);
+	border: 1px solid @border_main + #111;
+	.related-posts {
+		border-left:1px solid @border_main;
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 4. WIDGETS */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 4.1 Generic Widgets */
+.widget  {
+	ul {
+		li {
+			a {
+				color: @color_links_widgets;
+			}
+		}
+	}
+}
+
+/* 4.2 Specific Widgets */
+/* SEARCH FORM */
+#searchform  {
+	.s, #s {
+		border: 1px solid @border_main; 
+		color: @color_body;
+	}
+}
+
+/* FLICKR */
+.widget_woo_flickr {
+	a {
+		img {
+			border: 1px solid @border_main; 
+		}
+		&:hover {
+			img { 
+				border-color: darken(@border_main, 10%); 
+			}
+		}
+	}
+}
+
+/* CALENDAR */
+#wp-calendar{
+	th, td { 
+		background: darken(@bg_light, 10%); 
+	}
+	td { 
+		color: lighten(@color_body, 10%); 
+	}
+}
+
+/* BLOG AUTHOR */
+.widget_woo_blogauthorinfo {
+	.avatar { 
+		border:1px solid @border_main; 
+		.box_shadow(1px, 1px, 0, 0, @border_main);
+	}
+	p {
+		a {
+			background: @color_buttons;
+		}
+	}
+}
+
+/* TWITTER */
+.widget_woo_twitter {
+	.back { 
+		background: @bg_light; 
+	}
+	ul { 
+		border:1px solid @border_main;
+		li {
+			border-bottom:1px solid @border_main;
+			.time { 
+				color: lighten(@color_body, 10%); 
+			}
+		}
+	}
+	p {
+		color: lighten(@color_body, 10%);
+		a { color: darken(@color_body, 20%); }
+	}
+}
+
+/* WOOTABS */
+.widget_woodojo_tabs, .woocommerce_tabs, .woocommerce-tabs { 
+	ul.nav-tabs, ul.tabs {
+		border-bottom: 1px solid @border_main;
+		li {
+			a {
+				color: @color_body;
+			}
+			&:last-child {
+				a {
+					border-right-width: 1px;
+				}
+			}
+			&.active {
+				a {
+					color: darken(@color_body, 31%);
+				}
+			}
+		}
+	}
+}
+
+.widget_woodojo_tabs {
+	img {
+		border: 1px solid @border_main;
+	}
+	.meta {
+		color: lighten(@color_body, 20%);
+	}
+}
+
+.widget_woodojo_instagram {	
+	img {
+		border: 1px solid @border_main;
+	}
+}
+.widget_woo_flickr {
+	a {
+		img {
+			border: 1px solid @border_main;
+		}
+	}
+}
+.widget_woodojo_tweets {
+	.time-ago {
+		a {
+			color: lighten(@color_body, 20%);
+		}
+	}
+	ul {
+		li {
+			border-bottom:1px solid @border_main;
+		}
+	}
+}
+
+.widget_woodojo_twitterprofile, .widget_woodojo_instagram_profile {
+	img {
+		border:1px solid @border_main; 
+		.border_radius(.202em);
+		.box_shadow(1px, 1px, 0, 0, @border_main);
+		&:hover { 
+			border-color: darken(@border_main, 5%);
+		}		
+	}
+}
+
+#main {
+	h1, h2, h3, h4, h5, h6 {
+		font-family: @headings_font;
+		font-weight: 300;
+	}
+}
+
+/* Features Widget */
+.widget_woothemes_features {
+	.feature {
+		border-bottom:1px solid @border_main;
+	}
+}
+
+/* Testimonials Widget */ 
+.widget_woothemes_testimonials {
+	.quote {
+		border-bottom:1px solid @border_main;
+		.testimonials-image {
+			img {
+				.border_radius(.202em);
+				.box_shadow(1px, 1px, 0, 0, @border_main);
+			}
+		}
+		.author {
+			color: lighten(@color_body, 15%);
+		}
+	}
+}
+
+/* Homepage Widgets Styling */
+#main {
+	.widget {
+		border-bottom: 1px solid darken(@border_main, 5%);
+	}
+	.widget_woothemes_features {
+		.feature {
+			h3 {
+				font-family: @headings_font;
+				color: darken( @color_body, 31% );
+				a {
+					color: darken( @color_body, 31% );
+				}
+			}
+			.feature-image {
+				margin: .202em 0 0;
+			}			
+		}
+	}	
+	.widget_woothemes_testimonials {
+		h2 {
+			font-family: @headings_font;
+			color: darken( @color_body, 31% );
+		}
+		.quote {
+			border-bottom: 1px solid @border_main;
+		}
+	}
+	#sidebar {
+		h3 {
+			font-family: @sans;
+		}
+	}
+}
+
+#intro-message {
+	header {
+		h1 {
+			font-family: @headings_font;
+			color: darken( @color_body, 31% );
+		}
+	}
+}
+
+#page-content {
+	border-bottom: 1px solid @border_main;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 5. COMMENTS */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 5.1 Comments */
+#comments {
+	.comment {
+		.comment-container { 
+			border-bottom: 1px solid @border_main;
+		}
+		.comment-head {
+			color: lighten(@color_body, 30%);
+			.name {
+				color: @color_body;
+				a { color: @color_body; }
+			}
+			.date, .edit, .perma { }
+		}
+		.avatar {
+			border: 1px solid @border_main;
+			.box_shadow(0, 1px, 1px, 0, lighten(@color_body, 45%));
+		}
+		.reply {
+			a {
+				color: darken(@color_body, 15%);
+			}
+		}
+	}
+}
+
+/* 5.2 Comments Form */
+#respond  {
+	label { 
+		color: @color_body;
+	}
+}
+
+#comments, #respond  {
+	h3 {
+		color: @color_headings + #111;
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 6. PAGE TEMPLATES */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 6.1 Timeline Page Template */
+#archives { 
+	.archives_list {
+		border-left:1px solid @border_main;
+		.date { 
+			color: lighten(@color_body, 10%); 
+		}
+		.comments {
+			a {
+				color: lighten(@color_body, 15%);
+			}
+		}
+	}
+}
+h3.archive_year { 
+	color: @color_body; 
+}
+
+.page-template-template-contact-php {
+	.location-twitter  {
+		border-bottom: 1px solid @border_main;
+	    .contact-social  {
+	    	#twitter { 
+	    	    ul {
+	    	    	li {
+	    	    		a.time { 
+	    	    			color: lighten(@color_body, 15%); 
+	    	    		}
+	    	    	}
+	    	    }
+	    	}
+	    	#connect  {
+	    		border-top: 1px solid @border_main;
+	    	}
+	    }
+	}
+}
+
+/* 6.3 Image Gallery */
+#main div.gallery  {
+	dl.gallery-item  {
+		img  {
+			.box_shadow(0,0,5px,0,rgba(0,0,0,0.2));
+		}
+	}
+}
+
+.image-gallery-item img {
+	border:1px solid darken(@bg_light,10%); 
+	background:@bg_light; 
+	&:hover { 
+		border: 1px solid darken(@bg_light,20%); 
+		.box_shadow(0,1px,.327em,0px,rgba(0,0,0,.2));
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 8. MISC */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 8.1 Forms */
+// Input / Textarea
+input[type=text], input.input-text, textarea, input.txt, input[type=tel], input[type=email] {
+	color: @color_body;
+	border: 1px solid darken(@border_main, 7%);
+}
+
+/* 8.2 Buttons (Includes WF chortcode buttons) */
+a.button, 
+a.comment-reply-link, 
+#commentform #submit,
+.submit,
+input[type=submit],
+input.button,
+button.button,
+#wrapper .woo-sc-button {
+	background: @color_buttons;
+	.box_shadow(2px, 2px, 3px, 0, @border_main);
+	
+	&.green { 
+	    background: @color_buttons2;
+	    &:hover { 
+	    	background: darken( @color_buttons2, 6% );
+		}
+	}
+}
+
+/* 8.3 Shortcode info boxes */
+p.woo-sc-box, div.woo-sc-box {
+	color: darken(@color_body, 15%);
+	&.info {
+		border-color: @border_main;
+		background-color: @bg_light;
+	}
+	&.normal {
+		border-color: @border_main;
+		background-color: @bg_light;
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 9. FEATURED SLIDER */
+/*-------------------------------------------------------------------------------------------*/
+
+#featured-slider {
+	background: @bg_top;
+	color: @color_slider - #111;
+	.text_shadow(0, -1px, 0, darken( @bg_top, 15% ) );
+	h1, h2, h3, h4, h5, h6 {
+		font-family: @headings_font;
+		color: @color_slider;
+		.text_shadow(0, -1px, 0, darken( @bg_top, 15% ) );
+	}
+	.flex-direction-nav {
+		a {
+			background-image: url('@{imagepath}/featured_slider_nav.png');
+		}
+	}
+	/* Control Nav */
+	.flex-control-nav  {
+		li  {
+			a  {
+				&:hover  {
+					background: @bg_light;
+				}
+				&.flex-active  {
+					background: @bg_light;
+				}
+			}
+		}
+	}
+	.woo-sc-button {
+		.box_shadow(1px, 1px, 1px, 0, darken(@bg_top, 10%));
+		background: @bg_top - #111;
+	}
+}
+
+// WooCommerce Styling
+#header ul.cart {
+	border-left-color: @border_top;
+	&.nav {
+		li {
+			&:hover {
+				background: none;
+			}
+		}
+	}
+	li {
+		a.cart-contents {
+			span {
+				background: @bg_top + #222;
+			}
+		}
+	}
+}
+.onsale { background: @bg_top; }
+.widget .product_list_widget {
+	li {
+		.amount { 
+			color: @color_buttons;
+		}
+	}
+}
+.quantity {
+	.plus, .minus {
+		background: @color_buttons;
+	}
+}
+.single-product {
+	.woocommerce_tab, .woocommerce-tabs {
+		.tabs {
+			li {
+				a {
+					color: @color_headings;
+					&:hover {
+						color: @color_buttons;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+
+ 	/* 2. TOP NAVIGATION (Add top navigation presentational styles here) */
+	#top {
+		background: darken(@bg_top, 5%);
+		border: 1px solid darken(@bg_top, 7%);
+	    ul.nav {
+	    	> li { // The following styles are applied ONLY to the top level list items
+	    		a {
+	    			color: @color_nav;
+	    			&:hover {
+	    				background: darken(@bg_top, 8%);
+	    			}
+	    		}
+	    		&:hover {
+	    			background: darken(@bg_top, 8%);
+	    		}
+	    	}
+	    	/* LEVEL 2 */
+	    	ul {
+	    		background: darken(@bg_top, 8%);
+		
+	    	}
+	    }
+	}
+
+	/* MAIN NAVIGATION DROPDOWN MENUS (Add main navigation presentational styles here) */
+	#navigation  {
+		background: none;
+	    ul.nav {
+	    	> li { 
+	    		a {
+	    			color: @color_nav;
+	    			.text_shadow(0, -1px, 0, darken(@bg_top, 10%) );
+	    		}
+	    		&:hover {
+                    background: darken(@bg_top, 10%);
+					.border_radius(.327em);
+        		}
+				&.current_page_item, &.current_page_parent, &.current-menu-ancestor, &.current-cat, &.li.current-menu-item {
+					a { 
+						background: darken(@bg_top, 10%);
+					}
+				}	
+	    	}
+	    	/* LEVEL 2 */
+	    	ul {
+	    		background: darken(@bg_top, 10%);
+	    		li {
+	    			a {
+	    				&:hover {
+	    					background: darken(@bg_top, 15%);
+	    				}
+	    			}
+	    		}		
+	    	}
+	    }
+	}
+
+	// WooCommerce
+	.single-product {
+		.summary {
+			.price {
+				color: @color_buttons;
+			}
+			.single_add_to_cart_button {
+				background: @color_buttons;
+			}
+		}
+	}
+
+}
