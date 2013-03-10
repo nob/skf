@@ -79,7 +79,7 @@ INDEX
   }
   /* 2. TOP NAVIGATION (Add top navigation presentational styles here) */
   #top {
-    background: #000;
+    background: #323232;
   }
   #top #top-nav {
       /*
@@ -103,14 +103,23 @@ INDEX
     color: #f0f0f0;
   }
   #top ul.nav > li a:hover {
+      /*
     background: #111;
+    */
+    background: #323232;
   }
   #top ul.nav > li:hover {
+      /*
     background: #111;
+    */
+    background: #323232;
   }
   #top ul.nav ul {
+      /*
     background: #111;
     background: rgba(0, 0, 0, 0.9);
+    */
+    background: #323232;
   }
   /* 3. MAIN NAVIGATION DROPDOWN MENUS (Add main navigation presentational styles here) */
   #navigation {
