@@ -240,6 +240,9 @@ INDEX
     width: 100%;
     padding: 0;
   }
+  #main.fullwidth {
+    padding: 20px 0;
+  }
   #main {
     width: 62%;
     margin: 0;
@@ -452,14 +455,27 @@ INDEX
   .has-slider body {
     overflow-y: scroll;
   }
-  .has-slider #content-top {
+  .has-slider #content-top,
+  .page #content-top {
     position: fixed;
     top: 0;
     z-index: 0;
     width: 100%;
     background: none;
   }
-  .has-slider #header {
+  .page #content-top h1{
+    z-index:1;
+    position:fixed;
+    top:200px;
+    left:150px;
+    color:#FFFFFF;
+    font-size: 28px;
+  }
+  .page #content h1 {
+      display: none;
+  }
+  .has-slider #header,
+  .page #header {
     background-color: rgba(0, 0, 0, 0.5) 0%;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5) 0%), to(rgba(0, 0, 0, 0) 100%));
     /* Saf4+, Chrome */
@@ -482,7 +498,8 @@ INDEX
     width: 100%;
     z-index: 1;
   }
-  .has-slider #featured-wrap {
+  .has-slider #featured-wrap,
+  .page #custom-bg {
     position: absolute;
     top: 0;
     width: 100%;
@@ -543,7 +560,8 @@ INDEX
     position: relative;
     width: 960px;
     margin: 0px auto;
-  }
+    -webkit-border-radius: 10px;
+}
   body.admin-bar.has-slider #content-top {
     top: 28px;
   }

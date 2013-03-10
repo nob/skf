@@ -110,7 +110,15 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 				);
 	$settings = woo_get_dynamic_values( $settings );
 	if ( ( is_front_page() || is_home() ) && ( isset($settings['featured']) && $settings['featured'] == 'true' ) ) { get_template_part( 'includes/featured' ); } 
+    else {
 	?>
+    <h1 style="z-index: 1;"><?php the_title();?></h1>
+    <div id="custom-bg">
+        <img src="http://skfine.jointanet.com/wp-content/uploads/2013/03/Peppers-2560x2733.jpg" alt="" width="2560" class="woo-image slide-image full">
+    </div>
+    <?php
+    }
+    ?>
 
 	</div><!-- /#content-top -->
 

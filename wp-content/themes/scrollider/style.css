@@ -445,6 +445,14 @@ table tbody tr:last-child td {
 /* 2.1 Containers & Columns */
 #wrapper {
   background: #f1f1f1;
+  z-index: 2; 
+  position: relative; 
+  width: 960px; 
+  margin: 0px auto; 
+  -webkit-border-radius: 10px;
+}
+.page #wrapper {
+    margin-top: 250px;
 }
 #content {
   background: #f1f1f1;
@@ -2127,6 +2135,7 @@ li.comment #respond h3 small {
   border-bottom: 1px solid #f1f1f1;
   box-shadow: 0 1px 0 0 #ffffff;
   -webkit-box-shadow: 0 1px 0 0 #ffffff;
+  -webkit-border-radius: 10px;
   padding: 2.244em 0 0;
   margin: 0 0 2.618em;
 }
@@ -2434,6 +2443,7 @@ li.comment #respond h3 small {
 .home.has-slider #content {
   box-shadow: 0 -12px 20px 0 rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0 -12px 20px 0 rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 10px;
 }
 .home.page.has-slider #content {
   padding-top: 2.618em;
