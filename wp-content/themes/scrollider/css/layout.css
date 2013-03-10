@@ -82,7 +82,10 @@ INDEX
     background: #000;
   }
   #top #top-nav {
+      /*
     margin-left: -1.618em;
+    */
+    margin-left: 60.618em;
     display: block;
   }
   #top #top-nav li a {
