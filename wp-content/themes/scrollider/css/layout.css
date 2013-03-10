@@ -529,6 +529,8 @@ INDEX
   .has-slider #wrapper {
     z-index: 2;
     position: relative;
+    width: 960px;
+    margin: 0px auto;
   }
   body.admin-bar.has-slider #content-top {
     top: 28px;
