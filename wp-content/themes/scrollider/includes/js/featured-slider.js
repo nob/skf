@@ -46,7 +46,9 @@ jQuery( window ).load( function() {
  * @return {void}
  */
 function adjust_content_margin( slide ) {
-    var height = jQuery( '#featured .slide:eq(' + slide + ')' ).outerHeight();
+    //var height = jQuery( '#featured .slide:eq(' + slide + ')' ).outerHeight();
+    //use fixed margin height for every slide.
+    var height = '450'
     var window_width = jQuery( window ).width();
     if( window_width >= 768 ) {
       jQuery( '.home #content' ).stop().animate( { marginTop: height + 'px' }, woo_localized_data.animationDuration );
