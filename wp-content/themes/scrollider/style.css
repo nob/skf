@@ -2267,8 +2267,8 @@ li.comment #respond h3 small {
 }
 #featured .flex-control-nav {
   position: absolute;
-  right: 6.854em;
-  bottom: 2.244em;
+  right: 15.854em;
+  top: 31.244em;
   z-index: 9999;
   padding: 0;
   text-align: center;
