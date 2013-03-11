@@ -32,7 +32,7 @@
 			?>
 
 			<section id="sub-feature">
-
+                <h1>SKfineからのご提案</h1>
 				<div class="col-full">
 <!--
                         <div id="social">

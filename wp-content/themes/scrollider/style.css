@@ -367,6 +367,7 @@ h6 a:hover {
 h1 {
   font-size: 1.618em;
   line-height: 1.387em;
+  text-align: center;
 }
 h2 {
   font-size: 1.387em;
