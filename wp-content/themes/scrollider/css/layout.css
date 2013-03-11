@@ -394,7 +394,10 @@ INDEX
   }
   .home #sub-feature #features ul li {
     margin: 0 5.63% 2.244em 0;
+    /*
     width: 29.58%;
+    */
+    width: 19.37%;
   }
   .home #sub-feature #features ul li.clear {
     margin: 0;

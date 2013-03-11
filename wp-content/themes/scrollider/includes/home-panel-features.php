@@ -34,17 +34,18 @@
 			<section id="sub-feature">
 
 				<div class="col-full">
-
-					<div id="social">
+<!--
+                        <div id="social">
 						<h3><?php _e('Find us socially', 'woothemes'); ?></h3>
 						<?php
 							if ( isset($settings['social_panel']) && $settings['social_panel'] == 'true' ) 
-								get_template_part( 'includes/social-panel' );
+								//get_template_part( 'includes/social-panel' );
 						?>
 						<?php if ( isset($settings['features_social_text']) && $settings['features_social_text'] != '' ) { ?>
 							<p><?php echo $settings['features_social_text']; ?></p>
 						<?php } ?>
-					</div>
+                        </div>
+-->
 
 					<div id="features">
 
@@ -60,7 +61,7 @@
 						<?php
 						while ( $the_query->have_posts() ) { $the_query->the_post(); $count++;
 		    				?>
-		    				<li class="fix <?php if ( $count % 3 == 0 ) { echo 'last'; } ?>">
+		    				<li class="fix <?php if ( $count % 4 == 0 ) { echo 'last'; } ?>">
 		    					
 		    					<?php $feature_icon = get_post_meta( $post->ID, 'feature_icon', true ); if ( $feature_icon ) { ?><div class="image"><img src="<?php echo get_post_meta( $post->ID, 'feature_icon', true ); ?>" alt="" /></div><?php } ?>
 		    					<div class="entry">
@@ -80,7 +81,7 @@
 			    				</div>
 
 			    				</li>
-			    				<?php if ( $count % 3 == 0 ) { echo '<li class="fix clear"></li>'; } ?>
+			    				<?php if ( $count % 4 == 0 ) { echo '<li class="fix clear"></li>'; } ?>
 		    				<?php
 		    			} // End While Loop ?>
 
