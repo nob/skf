@@ -240,7 +240,8 @@ INDEX
     width: 100%;
     padding: 0;
   }
-  #main.fullwidth {
+  #main.fullwidth,
+  #main.col-left {
     padding: 20px 0;
   }
   #main {
@@ -456,14 +457,16 @@ INDEX
     overflow-y: scroll;
   }
   .has-slider #content-top,
-  .page #content-top {
+  .page #content-top, 
+  .single #content-top {
     position: fixed;
     top: 0;
     z-index: 0;
     width: 100%;
     background: none;
   }
-  .page #content-top h1{
+  .page #content-top h1,
+  .single #content-top h1{
     z-index:1;
     position:fixed;
     top:200px;
@@ -471,11 +474,13 @@ INDEX
     color:#FFFFFF;
     font-size: 28px;
   }
-  .page #content h1 {
+  .page #content h1,
+  .single #content h1 {
       display: none;
   }
   .has-slider #header,
-  .page #header {
+  .page #header, 
+  .single #header {
     background-color: rgba(0, 0, 0, 0.5) 0%;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5) 0%), to(rgba(0, 0, 0, 0) 100%));
     /* Saf4+, Chrome */
@@ -499,7 +504,8 @@ INDEX
     z-index: 1;
   }
   .has-slider #featured-wrap,
-  .page #custom-bg {
+  .page #custom-bg,
+  .single #custom-bg {
     position: absolute;
     top: 0;
     width: 100%;

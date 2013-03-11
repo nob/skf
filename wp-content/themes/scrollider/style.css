@@ -451,7 +451,8 @@ table tbody tr:last-child td {
   margin: 0px auto; 
   -webkit-border-radius: 10px;
 }
-.page #wrapper {
+.page #wrapper,
+.single #wrapper {
     margin-top: 250px;
 }
 #content {
