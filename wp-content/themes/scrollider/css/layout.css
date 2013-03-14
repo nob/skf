@@ -221,7 +221,10 @@ INDEX
   }
   #navigation ul.nav ul li a {
     font-family: "Open Sans", sans-serif;
+    /*
     font-size: .9em;
+    */
+    font-size: 1.6em;
   }
   #navigation ul.nav ul li:last-child {
     border-bottom: 0;
@@ -534,7 +537,7 @@ INDEX
     z-index: 1;
   }
   .has-slider #featured header h1 {
-    font-size: 2.618em;
+    font-size: 2.0em;
   }
   .has-slider #featured .flex-control-nav {
     display: block;

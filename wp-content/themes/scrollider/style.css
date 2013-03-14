@@ -290,7 +290,7 @@ sub {
 /*-------------------------------------------------------------------------------------------*/
 /* 1.1 Defaults */
 html {
-  font-size: 62.5%;
+  font-size: 72.00%;
 }
 body {
   font-size: 1.2em;
@@ -1739,7 +1739,7 @@ body.without-features #content {
   margin-right: 0;
 }
 .widget_woo_newsfromblog .section-blog ul li header h1 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin: 0 0 .618em;
 }
 .widget_woo_newsfromblog .section-blog ul li header h1 a {
