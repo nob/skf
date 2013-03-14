@@ -114,7 +114,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
     else {
 	?>
     <div id="custom-bg">
-        <img src="http://skfine.jointanet.com/wp-content/uploads/2013/03/sk-image-3.jpg" alt="" width="2560" class="woo-image slide-image full">
+        <img src="http://skfine.jointanet.com/wp-content/uploads/2013/03/sk-image-4.jpg" alt="" width="2560" class="woo-image slide-image full">
     </div>
     <?php
     }
