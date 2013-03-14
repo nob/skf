@@ -40,6 +40,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
     	
 		<section id="main" class="col-left">
 		           
+		    <h1><?php the_title(); ?></h1>
         <?php
         	if ( have_posts() ) { $count = 0;
         		while ( have_posts() ) { the_post(); $count++;
@@ -53,8 +54,6 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 
 	                <header>
 	                
-		                <h1><?php the_title(); ?></h1>
-		                
 	                	<?php //woo_post_meta(); ?>
 	                	
 	                </header>

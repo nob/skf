@@ -488,19 +488,6 @@ INDEX
     width: 100%;
     background: none;
   }
-  .page #content-top h1,
-  .single #content-top h1{
-    z-index:1;
-    position:fixed;
-    top:200px;
-    left:110px;
-    color:#FFFFFF;
-    font-size: 28px;
-  }
-  .page #content h1,
-  .single #content h1 {
-      display: none;
-  }
   .has-slider #header,
   .page #header, 
   .single #header {

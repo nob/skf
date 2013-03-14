@@ -463,7 +463,7 @@ table tbody tr:last-child td {
 }
 .page #wrapper,
 .single #wrapper {
-    margin-top: 250px;
+    margin-top: 180px;
 }
 #content {
   background: #f1f1f1;
@@ -671,6 +671,10 @@ body.without-features #content {
 #main {
   margin: 0 0 1.618em;
 }
+#main h1 {
+    text-align: left;
+    padding-left: 40px;
+}
 /* 2.4.1 Slider */
 /* 2.5 Sidebar */
 #sidebar .secondary {
@@ -743,12 +747,14 @@ body.without-features #content {
 .search-results .page,
 .search-results .type-product,
 .search-results .type-portfolio {
-  margin: 0 0 2.618em;
+  margin: 0 13px 2.618em;
   background: #ffffff;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  /*
   -webkit-border-radius: 6px;
   border-radius: 6px;
+  */
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -964,10 +970,12 @@ body.without-features #content {
 .search-results .type-portfolio img.woo-image {
   padding: 0;
   border: 0;
+  /*
   -webkit-border-top-left-radius: 6px;
   -webkit-border-top-right-radius: 6px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  */
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
@@ -1291,9 +1299,6 @@ body.without-features #content {
 }
 .post-share-bar ul li.delicious a {
   background-position: -156px 0;
-}
-.single #main article {
-  margin: 0;
 }
 .single #post-author {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);

@@ -123,6 +123,7 @@ jQuery(document).ready(function() {
     	<?php woo_main_before(); ?>
     
 		<section id="main" class="col-left">
+	        <h1><?php the_title(); ?></h1>
 
             <article id="contact-page" class="page type-page">
 
@@ -139,7 +140,6 @@ jQuery(document).ready(function() {
 	                <?php while ( have_posts() ) { the_post(); ?>
 	                
 	                		<header>
-	                			<h1><?php the_title(); ?></h1>
 	                		</header>
 
 	                        <section class="entry">
