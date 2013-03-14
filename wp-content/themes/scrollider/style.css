@@ -296,7 +296,10 @@ body {
   font-size: 1.2em;
   line-height: 1.618;
   color: #9e9e9e;
+  /*
   font-family: "Open Sans", sans-serif;
+  */
+  font-family: "F+UD-ニューロダン M";
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
@@ -350,7 +353,7 @@ h6 {
   /*
   font-family: "Merriweather", sans-serif;
   */
-  font-family: "F+UD-筑紫明朝 E";
+  font-family: "F+UD-ニューロダン M";
   color: #4a4a4a;
   margin: 0 0 .618em;
 }
@@ -544,7 +547,10 @@ ul.nav li.li.current-menu-item ul li.li.current-menu-item a {
   clear: both;
   margin-bottom: 1em;
   display: none;
+  /*
   font-family: "Merriweather", sans-serif;
+  */
+  font-family: "F+UD-ニューロダン M";
   font-size: 1.1em;
   padding: 0;
 }

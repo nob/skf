@@ -537,7 +537,8 @@ INDEX
     z-index: 1;
   }
   .has-slider #featured header h1 {
-    font-size: 2.0em;
+    font-size: 2.2em;
+    font-family: "F+UD-筑紫明朝 E"; 
   }
   .has-slider #featured .flex-control-nav {
     display: block;
@@ -561,12 +562,14 @@ INDEX
     padding: 0;
   }
   .has-slider #featured .slide.has-overlay .slide-content {
-    padding: 2.244em;
+    padding: 1.0em;
+    margin: 0px auto;
+    width: 460px;
     background: #000000;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.2);
     /* MSIE */
   
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
     -webkit-border-radius: 1em;
     border-radius: 1em;
     -moz-background-clip: padding;
