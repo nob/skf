@@ -2,7 +2,10 @@
 /* Body */
 body {
   color: #9e9e9e;
+  /*
   background: #323232;
+  */
+  background: #ffffff;
 }
 /* General Links */
 a {
@@ -20,6 +23,12 @@ a:hover {
 }
 #wrapper {
   background: #ebf4e1;
+  /*
+  background: #DCF4D4;
+  background: #D1E7C9;
+  background: #C7DDC0;
+  background: #D6EECF;
+  */
 }
 /* Sub-Feature */
 #sub-feature {
@@ -47,7 +56,11 @@ a:hover {
 }
 /* Footer Widgets */
 #footer-widgets-container {
+  /*
   background: #ffffff;
+  background: #D6EECF;
+  */
+  background: #ebf4e1;
   border-top: 1px solid #ebf4e1;
 }
 #footer-widgets-container #footer-widgets .widget {

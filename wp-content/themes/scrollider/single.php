@@ -55,7 +55,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	                
 		                <h1><?php the_title(); ?></h1>
 		                
-	                	<?php woo_post_meta(); ?>
+	                	<?php //woo_post_meta(); ?>
 	                	
 	                </header>
 
@@ -67,13 +67,15 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 					<?php the_tags( '<p class="tags">'.__( 'Tags: ', 'woothemes' ), ', ', '</p>' ); ?>
 	            
 				</div><!-- /.article-inner -->
-
+<!--
 
 		        <nav id="post-entries" class="fix">
 		            <div class="nav-prev fl"><?php previous_post_link( '%link', '<span class="meta-nav">&larr;</span> %title' ); ?></div>
 		            <?php woo_single_post_share_bar( ); ?>
 		            <div class="nav-next fr"><?php next_post_link( '%link', '%title <span class="meta-nav">&rarr;</span>' ); ?></div>
-		        </nav><!-- #post-entries -->
+                </nav>
+-->
+                <!-- #post-entries -->
 
 				<?php if ( isset( $woo_options['woo_post_author'] ) && $woo_options['woo_post_author'] == 'true' ) { ?>
 				<aside id="post-author" class="fix">

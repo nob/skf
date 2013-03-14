@@ -301,7 +301,10 @@ body {
   -ms-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  /*
   background: #323232;
+  */
+  background: #ffffff;
 }
 img {
   vertical-align: bottom;
@@ -344,7 +347,10 @@ h3,
 h4,
 h5,
 h6 {
+  /*
   font-family: "Merriweather", sans-serif;
+  */
+  font-family: "F+UD-筑紫明朝 E";
   color: #4a4a4a;
   margin: 0 0 .618em;
 }
@@ -458,7 +464,10 @@ table tbody tr:last-child td {
 }
 #content {
   background: #f1f1f1;
+  /*
   padding: 0 0 2.244em;
+  */
+  padding: 0 0 10px;
 }
 #content-top {
   background: #f1f1f1;
@@ -692,7 +701,10 @@ body.without-features #content {
 /* 2.8 Home & Single widget areas */
 #single-widget-fullwidth,
 #home-widget-fullwidth {
+    /*
   margin: 2.244em auto 0;
+  */
+  margin: 10px auto 0;
 }
 .single-features #single-widget-fullwidth {
   margin: 2.244em 0 0 0;
@@ -1685,7 +1697,7 @@ body.without-features #content {
   background: none;
   box-shadow: 0 0 0 0 #888888;
   -webkit-box-shadow: 0 0 0 0 #888888;
-  padding: 0;
+  padding: 0 15px;
 }
 .widget_woo_newsfromblog h3 {
   position: relative;
@@ -2137,7 +2149,6 @@ li.comment #respond h3 small {
   border-bottom: 1px solid #f1f1f1;
   box-shadow: 0 1px 0 0 #ffffff;
   -webkit-box-shadow: 0 1px 0 0 #ffffff;
-  -webkit-border-radius: 10px;
   padding: 2.244em 0 0;
   margin: 0 0 2.618em;
 }
@@ -2157,7 +2168,7 @@ li.comment #respond h3 small {
 #sub-feature #features ul {
   float: left;
   width: 100%;
-  margin: 0;
+  margin: 10px 20px;
   list-style: none outside none;
 }
 #sub-feature #features ul li {
@@ -2279,7 +2290,7 @@ li.comment #respond h3 small {
 #featured .flex-control-nav {
   position: absolute;
   right: 15.854em;
-  top: 31.244em;
+  top: 25.244em;
   z-index: 9999;
   padding: 0;
   text-align: center;
@@ -2699,7 +2710,10 @@ h3.archive_year {
 .page-template-template-contact-php .location-twitter {
   margin: 0 0 1em;
   padding: 0 0 1.618em;
+  /*
   border-bottom: 1px solid #f0f0f0;
+  */
+  border-bottom: 0px solid #f0f0f0;
 }
 .page-template-template-contact-php .location-twitter .col-left {
   float: none;
@@ -3129,4 +3143,7 @@ html[xmlns] .slides {
  * include js that eliminates this class on page load */
 .no-js .slides > li:first-child {
   display: block;
+}
+#fontplus-trial-banner {
+    display: none;
 }

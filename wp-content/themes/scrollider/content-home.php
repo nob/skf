@@ -39,7 +39,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	    
 			<header>
 				<h1><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-				<?php woo_post_meta(); ?>
+				<?php //woo_post_meta(); ?>
 			</header>
 
 			<section class="entry">
@@ -54,7 +54,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 			<footer class="post-more">      
 			<?php if ( isset( $woo_options['woo_post_content'] ) && $woo_options['woo_post_content'] == 'excerpt' ) { ?>				
 				<?php edit_post_link( __( '{ Edit }', 'woothemes' ), '<span class="edit">', ' <span class="post-more-sep">&bull;</span></span>' ); ?>
-				<span class="read-more"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e( 'Continue Reading &rarr;', 'woothemes' ); ?>"><?php _e( 'Continue Reading &rarr;', 'woothemes' ); ?></a></span>
+				<span class="read-more"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e( '続きを読む &rarr;', 'woothemes' ); ?>"><?php _e( '続きを読む &rarr;', 'woothemes' ); ?></a></span>
 			<?php } ?>
 			</footer>
 

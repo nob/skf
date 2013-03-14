@@ -26,6 +26,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 <?php woo_meta(); ?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<script type="text/javascript" src="http://webfont.fontplus.jp/accessor/script/fontplus.js?YL8mWMKXSGE%3D" charset="utf-8"></script>
 <?php
 	wp_head();
 	woo_head();
@@ -114,7 +115,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 	?>
     <h1 style="z-index: 1;"><?php the_title();?></h1>
     <div id="custom-bg">
-        <img src="http://skfine.jointanet.com/wp-content/uploads/2013/03/Peppers-2560x2733.jpg" alt="" width="2560" class="woo-image slide-image full">
+        <img src="http://skfine.jointanet.com/wp-content/uploads/2013/03/sk-image-3.jpg" alt="" width="2560" class="woo-image slide-image full">
     </div>
     <?php
     }

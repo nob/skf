@@ -145,11 +145,16 @@ INDEX
   
   }
   #navigation ul.nav > li a {
+    /*
     color: #939393;
     text-shadow: 1px 1px 0 #ffffff;
+    text-shadow: 1px 1px 0 #939393;
+    */
+    color: #292B2A;
   }
   #navigation ul.nav > li a:hover {
-    color: #3c3c3c;
+    color: ##D9D9D9;
+    text-shadow: 1px 1px 0 #292B2A;
     text-decoration: none;
   }
   #navigation ul.nav li.current_page_item a,
@@ -255,7 +260,9 @@ INDEX
   .search-results .page .article-inner,
   .search-results .type-product .article-inner,
   .search-results .type-portfolio .article-inner {
+      /*
     padding: 2.244em 2.244em 1.618em 9em;
+    */
   }
   .post .post-meta .post-avatar,
   .type-page .post-meta .post-avatar,
@@ -357,6 +364,7 @@ INDEX
   }
   .col-left {
     float: left;
+    margin-left: 20px;
   }
   .col-right {
     float: right;
@@ -393,11 +401,12 @@ INDEX
     overflow: hidden;
   }
   .home #sub-feature #features ul li {
-    margin: 0 5.63% 2.244em 0;
     /*
-    width: 29.58%;
-    */
     width: 19.37%;
+    margin: 0 5.63% 2.244em 0;
+    */
+    width: 22.37%;
+    margin: 0 2.63% 2.244em 0;
   }
   .home #sub-feature #features ul li.clear {
     margin: 0;
@@ -435,19 +444,27 @@ INDEX
     margin-right: 0;
   }
   .has-slider #navigation ul.nav > li a {
+      /*
     color: #fff;
     text-shadow: 1px 1px 0 #000000;
+    */
+    color: #292B2A;
+    text-shadow: 1px 1px 0 #939393;
+    /*
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+    */
   }
   .has-slider #navigation ul.nav > li a:hover {
-    color: #ccc;
+    color: ##D9D9D9;
+    text-shadow: 1px 1px 0 #292B2A;
   }
   .has-slider #navigation ul.nav > li ul li a {
-    color: #939393;
-    text-shadow: 0 3px 3px #ffffff;
+    color: #292B2A;
+    text-shadow: 1px 1px 0 #939393;
   }
   .has-slider #navigation ul.nav > li ul li a:hover {
-    color: #4a4a4a;
+    color: ##D9D9D9;
+    text-shadow: 1px 1px 0 #292B2A;
   }
   .has-slider #navigation ul.nav li.current_page_item a,
   .has-slider #navigation ul.nav li.current_page_parent a,
@@ -473,7 +490,7 @@ INDEX
     z-index:1;
     position:fixed;
     top:200px;
-    left:150px;
+    left:110px;
     color:#FFFFFF;
     font-size: 28px;
   }
@@ -484,20 +501,20 @@ INDEX
   .has-slider #header,
   .page #header, 
   .single #header {
-    background-color: rgba(0, 0, 0, 0.5) 0%;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5) 0%), to(rgba(0, 0, 0, 0) 100%));
+    background-color: rgba(0255, 0255, 0255, 0.5) 0%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5) 0%), to(rgba(0255, 0255, 0255, 0255) 100%));
     /* Saf4+, Chrome */
   
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
     /* Chrome 10+, Saf5.1+, iOS 5+ */
   
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-    /* FF3.6+ */
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.
   
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
     /* IE10 */
   
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
     /* Opera 11.10+ */
   
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);

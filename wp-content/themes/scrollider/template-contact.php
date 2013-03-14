@@ -177,7 +177,7 @@ jQuery(document).ready(function() {
 	                        <?php if ( isset($woo_options['woo_contactform_map_coords']) && $woo_options['woo_contactform_map_coords'] != '' ) { $geocoords = $woo_options['woo_contactform_map_coords']; }  else { $geocoords = ''; } ?>
 	                		<?php if ($geocoords != '') { ?>
 	                		<?php woo_maps_contact_output("geocoords=$geocoords"); ?>
-	                		<?php echo do_shortcode( '[hr]' ); ?>
+	                		<?php //echo do_shortcode( '[hr]' ); ?>
 	                		<?php } ?>
 
 	                    <?php if( isset( $hasError ) || isset( $captchaError ) ) { ?>
@@ -192,29 +192,29 @@ jQuery(document).ready(function() {
 	                    <form action="<?php the_permalink(); ?>" id="contactForm" method="post">
 
 	                        <ol class="forms">
-	                            <li><label for="contactName"><?php _e( 'Name', 'woothemes' ); ?></label>
+	                            <li><label for="contactName">お名前<?php //_e( 'Name', 'woothemes' ); ?></label>
 	                                <input type="text" name="contactName" id="contactName" value="<?php if( isset( $_POST['contactName'] ) ) { echo esc_attr( $_POST['contactName'] ); } ?>" class="txt requiredField" />
 	                                <?php if($nameError != '') { ?>
 	                                    <span class="error"><?php echo $nameError;?></span>
 	                                <?php } ?>
 	                            </li>
 
-	                            <li><label for="email"><?php _e( 'Email', 'woothemes' ); ?></label>
+	                            <li><label for="email">Eメールアドレス<?php //_e( 'Email', 'woothemes' ); ?></label>
 	                                <input type="text" name="email" id="email" value="<?php if( isset( $_POST['email'] ) ) { echo esc_attr( $_POST['email'] ); } ?>" class="txt requiredField email" />
 	                                <?php if($emailError != '') { ?>
 	                                    <span class="error"><?php echo $emailError;?></span>
 	                                <?php } ?>
 	                            </li>
 
-	                            <li class="textarea"><label for="commentsText"><?php _e( 'Message', 'woothemes' ); ?></label>
+	                            <li class="textarea"><label for="commentsText">お問い合わせ内容<?php //_e( 'Message', 'woothemes' ); ?></label>
 	                                <textarea name="comments" id="commentsText" rows="20" cols="30" class="requiredField"><?php if( isset( $_POST['comments'] ) ) { echo esc_textarea( $_POST['comments'] ); } ?></textarea>
 	                                <?php if( $commentError != '' ) { ?>
 	                                    <span class="error"><?php echo $commentError; ?></span>
 	                                <?php } ?>
 	                            </li>
-	                            <li class="inline"><input type="checkbox" name="sendCopy" id="sendCopy" value="true"<?php if( isset( $_POST['sendCopy'] ) && $_POST['sendCopy'] == true ) { echo ' checked="checked"'; } ?> /><label for="sendCopy"><?php _e( 'Send a copy of this email to yourself', 'woothemes' ); ?></label></li>
+	                            <li class="inline"><input type="checkbox" name="sendCopy" id="sendCopy" value="true"<?php if( isset( $_POST['sendCopy'] ) && $_POST['sendCopy'] == true ) { echo ' checked="checked"'; } ?> /><label for="sendCopy">このEメールのコピーを自身に送信する<?php //_e( 'Send a copy of this email to yourself', 'woothemes' ); ?></label></li>
 	                            <li class="screenReader"><label for="checking" class="screenReader"><?php _e( 'If you want to submit this form, do not enter anything in this field', 'woothemes' ); ?></label><input type="text" name="checking" id="checking" class="screenReader" value="<?php if( isset( $_POST['checking'] ) ) { echo esc_attr( $_POST['checking'] ); } ?>" /></li>
-	                            <li class="buttons"><input type="hidden" name="submitted" id="submitted" value="true" /><input class="submit button" type="submit" value="<?php esc_attr_e( 'Submit', 'woothemes' ); ?>" /></li>
+	                            <li class="buttons"><input type="hidden" name="submitted" id="submitted" value="true" /><input class="submit button" type="submit" value="送信<?php //esc_attr_e( 'Submit', 'woothemes' ); ?>" /></li>
 	                        </ol>
 	                    </form>
 
