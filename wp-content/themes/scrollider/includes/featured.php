@@ -91,7 +91,7 @@
 	    		?>
 
 	    		<div class="slide-content-container<?php if (!woo_image('return=true')) echo ' no-image' ?>">
-	    	    	<article class="slide-content col-full <?php if ( !$has_embed ) { echo 'not-video'; } ?>">
+	    	    	<article class="slide-content <?php if ( !$has_embed ) { echo 'not-video'; } ?>">
 	    	    		
 	    	    		<?php if ( !$has_embed OR ( $has_embed && $settings['slider_video_title'] != 'true' ) )  { // Hide title/description if video post ?>
 	    	    		<header>
