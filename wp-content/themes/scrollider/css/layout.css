@@ -408,8 +408,8 @@ INDEX
     width: 19.37%;
     margin: 0 5.63% 2.244em 0;
     */
-    width: 22.37%;
-    margin: 0 2.63% 2.244em 0;
+    width: 22.0%;
+    margin: 0 3.0% 2.244em 0;
   }
   .home #sub-feature #features ul li.clear {
     margin: 0;
@@ -604,10 +604,11 @@ INDEX
   }
   /* 5. FOOTER WIDGETS */
   #footer-widgets {
-    padding: 2.618em 0;
+    padding: 5px 0;
   }
   #footer-widgets .block {
-    margin-right: 3.8%;
+    margin-left: 1.9%;
+    margin-right: 1.9%;
     float: left;
   }
   #footer-widgets.col-1 .block {
@@ -618,19 +619,28 @@ INDEX
     margin-right: 0;
   }
   #footer-widgets.col-2 .block {
+    /*
     width: 48%;
+    */
+    width: 47%;
   }
   #footer-widgets.col-2 .footer-widget-2 {
     margin-right: 0;
   }
   #footer-widgets.col-3 .block {
+    /*
     width: 30.75%;
+    */
+    width: 30%;
   }
   #footer-widgets.col-3 .footer-widget-3 {
     margin-right: 0;
   }
   #footer-widgets.col-4 .block {
+    /*
     width: 22.05%;
+    */
+    width: 21.55%;
   }
   #footer-widgets.col-4 .footer-widget-4 {
     margin-right: 0;

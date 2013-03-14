@@ -747,7 +747,7 @@ body.without-features #content {
 .search-results .page,
 .search-results .type-product,
 .search-results .type-portfolio {
-  margin: 0 13px 2.618em;
+  margin: 0 13px 10px;
   background: #ffffff;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
@@ -2178,8 +2178,8 @@ li.comment #respond h3 small {
 }
 #sub-feature #features ul {
   float: left;
-  width: 100%;
-  margin: 10px 20px;
+  width: 98%;
+  margin: 0px 10px;
   list-style: none outside none;
 }
 #sub-feature #features ul li {
