@@ -82,6 +82,8 @@ define('WPLANG', 'ja');
  * テーマおよびプラグインの開発者には、その開発環境においてこの WP_DEBUG を使用することを強く推奨します。
  */
 define('WP_DEBUG', false);
+define('WP_DEBUG_DISPLAY', false);
+define('WP_DEBUG_LOG', true);
 
 /* 編集が必要なのはここまでです ! WordPress でブログをお楽しみください。 */
 
