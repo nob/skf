@@ -22,7 +22,7 @@ function qtwnm_custom($nav_menu_html) {
     $str = preg_replace($pattern, $replace, $nav_menu_html);
 
     $pattern = "%https?\:\/\/.+\/ja\/\"%";
-    $replace = qtrans_convertURL() . '"';;
+    $replace = qtrans_convertURL('', 'ja') . '"';;
     $str = preg_replace($pattern, $replace, $str);
 
     return $str;
