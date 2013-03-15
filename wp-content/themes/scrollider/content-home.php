@@ -46,7 +46,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 				<?php
 					$slide_excerpt = get_the_excerpt();
 					if ($slide_excerpt != '') {
-						echo '<p>'.woo_text_trim ( $slide_excerpt, 20 ).'</p>';
+						echo '<p>'.woo_text_trim ( $slide_excerpt, 60 ).'</p>';
 					}
 				?>
 			</section>
