@@ -84,10 +84,18 @@ INDEX
   #top #top-nav {
     margin-left: 60.618em;
     display: block;
-    width: 150px;
+    width: 270px;
   }
   #top #top-nav li a {
     text-shadow: 0 0 0 #ffffff;
+    padding-left: 22px;
+    width: 70px;
+  }
+  li#menu-item-67 > a { 
+      background: url(http://skfine.jointanet.com/wp-content/plugins/qtranslate/flags/gb.png) no-repeat left center; 
+  }
+  li#menu-item-68 > a { 
+      background:url(http://skfine.jointanet.com/wp-content/plugins/qtranslate/flags/jp.png) no-repeat left center; 
   }
   #top ul.nav {
     padding: 0;
@@ -103,8 +111,8 @@ INDEX
   #top ul.nav > li a:hover {
       /*
     background: #111;
-    */
     background: #323232;
+    */
   }
   #top ul.nav > li:hover {
       /*
