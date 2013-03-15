@@ -26,7 +26,12 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 <?php woo_meta(); ?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<script type="text/javascript" src="http://webfont.fontplus.jp/accessor/script/fontplus.js?YL8mWMKXSGE%3D" charset="utf-8"></script>
+<?php if (qtrans_getLanguage() == 'en') { // English ver ?>
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/english.css">
+<?php } else { ?> 
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/japanese.css">
+    <script type="text/javascript" src="http://webfont.fontplus.jp/accessor/script/fontplus.js?YL8mWMKXSGE%3D" charset="utf-8"></script>
+<?php } ?>
 <?php
 	wp_head();
 	woo_head();
