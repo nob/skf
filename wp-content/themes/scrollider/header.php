@@ -26,7 +26,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 <?php woo_meta(); ?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" media="screen" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<?php if (qtrans_getLanguage() == 'en') { // English ver ?>
+<?php if (qtrans_getLanguage() == 'en') { // English ver. ?>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/english.css">
 <?php } else { ?> 
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/japanese.css">
