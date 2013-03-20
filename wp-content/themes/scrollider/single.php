@@ -46,10 +46,16 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         		while ( have_posts() ) { the_post(); $count++;
         ?>
 			<article <?php post_class(); ?>>
-
+            <?php if (preg_match('/^\/business/i', $_SERVER['REQUEST_URI'])) {
+            ?>
+                    <div id="animation_hype_container" style="position:relative;overflow:hidden;width:935px;height:220px;">
+        <script type="text/javascript" charset="utf-8" src="<?php bloginfo('template_url'); ?>/animation.hyperesources/animation_hype_generated_script.js?32859"></script>
+                    </div>
+            <?php } else { ?>
 				<?php echo woo_embed( 'width=580' ); ?>
                 <?php if ( $settings['thumb_single'] == 'true' && ! woo_embed( '' ) ) { woo_image( 'width=' . $settings['single_w'] . '&height=' . $settings['single_h'] . '&class=thumbnail ' . $settings['thumb_single_align'] ); } ?>
-
+                    
+            <?php } ?>
                 <div class="article-inner">
 
 	                <header>
