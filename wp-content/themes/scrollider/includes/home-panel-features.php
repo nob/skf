@@ -32,7 +32,7 @@
 			?>
 
 			<section id="sub-feature">
-                <h1><?php _e('<!--:en-->Offers from SKfine<!--:--><!--:ja-->SKfineからのご提案<!--:-->');?></h1>
+                <h1><?php _e('<!--:en-->Offers from SKfine<!--:--><!--:ja-->エス・ケー・ファインからのご提案<!--:-->');?></h1>
 				<div class="col-full">
 <!--
                         <div id="social">
