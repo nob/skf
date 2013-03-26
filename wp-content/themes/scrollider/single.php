@@ -49,7 +49,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
             <?php if (preg_match('/^\/business/i', $_SERVER['REQUEST_URI'])) {
             ?>
                     <div id="animation_hype_container" style="position:relative;overflow:hidden;width:935px;height:220px;">
-        <script type="text/javascript" charset="utf-8" src="<?php bloginfo('template_url'); ?>/animation.hyperesources/animation_hype_generated_script.js?32859"></script>
+        <script type="text/javascript" charset="utf-8" src="<?php bloginfo('template_url'); ?>/skfine.hyperesources/skfine_hype_generated_script.js?32859"></script>
                     </div>
             <?php } else { ?>
 				<?php echo woo_embed( 'width=580' ); ?>
