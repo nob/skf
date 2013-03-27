@@ -46,7 +46,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
         		while ( have_posts() ) { the_post(); $count++;
         ?>
 			<article <?php post_class(); ?>>
-            <?php if (preg_match('/^\/business/i', $_SERVER['REQUEST_URI'])) {
+            <?php if (preg_match('/^\/features\/approach/i', $_SERVER['REQUEST_URI'])) {
             ?>
                     <div id="skfine_hype_container" style="position:relative;overflow:hidden;width:935px;height:220px;">
         <script type="text/javascript" charset="utf-8" src="<?php bloginfo('template_url'); ?>/skfine.hyperesources/skfine_hype_generated_script.js?32859"></script>

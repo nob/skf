@@ -86,7 +86,7 @@ class Woo_Widget_NewsFromBlog extends WP_Widget {
 		$html = '';
 
 		$args = array(
-			'post_type' => 'post',
+			'post_type' => 'page',
 			'posts_per_page' => $instance['limit']
 		);
 

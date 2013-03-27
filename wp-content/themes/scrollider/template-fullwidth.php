@@ -22,6 +22,7 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
     	<?php woo_main_before(); ?>
     	
 		<section id="main" class="fullwidth">
+			<h1><?php the_title(); ?></h1>
            
         <?php
         	if ( have_posts() ) { $count = 0;
@@ -30,7 +31,6 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
                 <article <?php post_class(); ?>>
 					<div class="article-inner">
 						<header>
-							<h1><?php the_title(); ?></h1>
 						</header>
 	                    
 	                    <section class="entry">

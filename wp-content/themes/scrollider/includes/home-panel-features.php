@@ -33,6 +33,7 @@
 
 			<section id="sub-feature">
                 <h1><?php _e('<!--:en-->Offers from SKfine<!--:--><!--:ja-->エス・ケー・ファインからのご提案<!--:-->');?></h1>
+                <p>長年の研究開発、深い専門性に裏付けられた提案力、世界をフィールドに捉えた広い視野、そして迅速で的確なご対応が私たちの強みです。たくさんの付加価値を添えて、より多くの満足をお届けしています。</p>
 				<div class="col-full">
 <!--
                         <div id="social">
@@ -63,11 +64,12 @@
 		    				?>
 		    				<li class="fix <?php if ( $count % 4 == 0 ) { echo 'last'; } ?>">
 		    					
-		    					<?php $feature_icon = get_post_meta( $post->ID, 'feature_icon', true ); if ( $feature_icon ) { ?><div class="image"><img src="<?php echo get_post_meta( $post->ID, 'feature_icon', true ); ?>" alt="" /></div><?php } ?>
+		    					<?php $feature_icon = get_post_meta( $post->ID, 'feature_icon', true ); if ( $feature_icon ) { ?><div class="image"><a href="<?php if ( $feature_readmore != '' ) { echo $feature_readmore; } else { the_permalink(); } ?>"><img src="<?php echo get_post_meta( $post->ID, 'feature_icon', true ); ?>" alt="" /></a></div><?php } ?>
 		    					<div class="entry">
 		    					<?php $feature_readmore = get_post_meta( $post->ID, 'feature_readmore', true ); ?>
 			    				<h2><a href="<?php if ( $feature_readmore != '' ) { echo $feature_readmore; } else { the_permalink(); } ?>"><?php the_title(); ?></a></h2>
 			    				<?php $feature_excerpt = get_post_meta( $post->ID, 'feature_excerpt', true ); ?>
+                        <!--
 			    				<p>
 			    					<?php 
 			    					if ( $feature_excerpt != '' ) { 
@@ -77,7 +79,7 @@
 			    					} ?>
 			    					<a href="<?php if ( $feature_readmore != '' ) { echo $feature_readmore; } else { the_permalink(); } ?>" class="read-more"><?php _e( 'Read More', 'woothemes' ); ?></a>
 			    				</p>
-			    				
+			            -->				
 			    				</div>
 
 			    				</li>

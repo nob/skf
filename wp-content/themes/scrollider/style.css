@@ -1839,7 +1839,7 @@ body.without-features #content {
 .widget_woo_newsfromblog .flexslider-nav-container:before {
   content: '';
   width: 100%;
-  height: 1px;
+  height: 0px;
   background: #e3e3e3;
   box-shadow: 0 1px 0 0 #ffffff;
   -webkit-box-shadow: 0 1px 0 0 #ffffff;
@@ -2151,8 +2151,10 @@ li.comment #respond h3 small {
   -webkit-box-shadow: 0 1px 0 0 #ffffff;
   padding: 2.244em 0 0;
   margin: 0 0 0;
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 10px;
+}
+#sub-feature>p {
+  margin: 0 20px 20px;
+  color: #4A4A4A;  
 }
 #sub-feature #social {
   float: left;

@@ -207,16 +207,61 @@ jQuery(document).ready(function() {
 	                            </li>
 
 	                            <li class="textarea"><label for="commentsText">お問い合わせ内容<?php //_e( 'Message', 'woothemes' ); ?></label>
-	                                <textarea name="comments" id="commentsText" rows="20" cols="30" class="requiredField"><?php if( isset( $_POST['comments'] ) ) { echo esc_textarea( $_POST['comments'] ); } ?></textarea>
+	                                <textarea name="comments" id="commentsText" rows="8" cols="30" class="requiredField"><?php if( isset( $_POST['comments'] ) ) { echo esc_textarea( $_POST['comments'] ); } ?></textarea>
 	                                <?php if( $commentError != '' ) { ?>
 	                                    <span class="error"><?php echo $commentError; ?></span>
 	                                <?php } ?>
 	                            </li>
+                                <li class="textarea">
+                            <h3>個人情報保護方針</h3>
+                            <textarea cols="110" rows="10" disabled>
+株式会社エスケーファイン（以下、弊社）は、お客さまに安心と信頼と有益な情報を提供し、さらにご満足いただくため、「個人情報保護法」を遵守し、個人情報を適切に取り扱います。
+
+１．個人情報の定義
+
+個人情報は「氏名」「住所」「電話番号」「Eメールアドレス」などに加えて、個人を特定できる「写真・画像データ」等、特定の個人を識別できる情報と定義します。また、直接個人を特定できなくても、いくつかの情報を結びつけることで、個人を識別できうる情報も個人情報として定義します。
+
+２．個人情報の取得と利用目的
+
+弊社はお客さまの個人情報を適正な手段以外で取得することはいたしません。個人情報をお預かりする場合には、事前にその利用目的と取り扱い責任者を明示して、合意いただくか、取得後速やかにその利用目的を本人に通知し、または、公表するものとします。
+
+お客さまの情報は電子化されている、されていないにかかわらず、限られた担当者のみが合意された目的にのみ利用します。担当者は業務上必要な時以外にはお客さまの情報を利用いたしません。
+
+Ⅰ.　弊社サービスをご利用の方の個人情報の利用目的
+
+    弊社又は弊社が提供する各サービスに関していただいたお問い合わせに関する内容確認、調査、又はご返信時の参照情報として
+    弊社が提供する各サービスの障害情報、メンテナンス情報等技術的なサポートに関する情報又は新サービス、新商品、機能改善等お客様に有用と思われる情報の告知の送付のため
+    弊社が提供する各サービス及びそれに関連するサービスのご提供及び弊社サービス利用者の管理のため
+    各サービスの提供に当たりお客様本人からあらかじめ同意を得ている場合に、個人情報を第三者に提供するため
+    その他、各サービスの提供に当たり利用目的を公表の上、同意をいただいた利用目的のため
+                         
+※なお、各サービスの利用に際しては、お客様の意思によって利用される個人情報と連動した機能の取り扱いには格別のご注意をいただきますようお願いいたします
+
+３．適切な情報セキュリティ対策の実施
+
+「個人情報取り扱い管理者」を配置するとともに、不正アクセス、紛失、改ざんおよび、漏洩などの予防に対する適切な対策を行います。電子化されていない個人情報（会員申込書、伝票など）も適切に保管します。
+
+４．教育と監査
+
+従業者で個人情報を取り扱う者へ定期的に「個人情報取り扱い」に関する教育を行います。さらに、定期的に個人情報が適切に取り扱われているか、監査を行います。
+
+５．個人情報の第三者提供について
+
+弊社では、代理店契約に基づき運営しているサービスがあります。これらのサービスでお預かりした個人情報は、弊社と同様の取り扱いをします。上記以外の第三者への提供は、個人情報保護法に定められた例外を除いて、提供いたしません。
+
+６．個人情報の取り扱いに関するお問い合わせ等の窓口
+
+弊社が保有しているお客さまの個人情報に対するお問い合わせ等は下記の窓口までご連絡ください。
+
+「株式会社エスケーファイン個人情報お問い合わせ窓口」
+                            </textarea>
+                                </li>
 	                            <li class="inline"><input type="checkbox" name="sendCopy" id="sendCopy" value="true"<?php if( isset( $_POST['sendCopy'] ) && $_POST['sendCopy'] == true ) { echo ' checked="checked"'; } ?> /><label for="sendCopy">このEメールのコピーを自身に送信する<?php //_e( 'Send a copy of this email to yourself', 'woothemes' ); ?></label></li>
 	                            <li class="screenReader"><label for="checking" class="screenReader"><?php _e( 'If you want to submit this form, do not enter anything in this field', 'woothemes' ); ?></label><input type="text" name="checking" id="checking" class="screenReader" value="<?php if( isset( $_POST['checking'] ) ) { echo esc_attr( $_POST['checking'] ); } ?>" /></li>
 	                            <li class="buttons"><input type="hidden" name="submitted" id="submitted" value="true" /><input class="submit button" type="submit" value="送信<?php //esc_attr_e( 'Submit', 'woothemes' ); ?>" /></li>
 	                        </ol>
 	                    </form>
+
 
 	                    <?php
 	                    		} // End WHILE Loop

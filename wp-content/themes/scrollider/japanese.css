@@ -17,16 +17,14 @@ h1,h2,h3,h4,h5,h6 {
 
 /* 2. Header menu */
 #menu-item-209,
-#menu-item-113,
-#menu-item-114,
-#menu-item-112,
+#menu-item-314,
+#menu-item-315,
 #menu-item-98 {
     display: list-item;
 }
 #menu-item-214,
-#menu-item-210,
-#menu-item-211,
-#menu-item-212,
+#menu-item-316,
+#menu-item-317,
 #menu-item-213 {
     display: none;
 }
