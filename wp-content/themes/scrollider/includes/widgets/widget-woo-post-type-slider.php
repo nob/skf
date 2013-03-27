@@ -86,8 +86,7 @@ class Woo_Widget_Slider extends WP_Widget {
 		$html = '';
 
 		$args = array(
-			//'post_type' => $instance['post_type'],
-			'post_type' => 'page',
+			'post_type' => $instance['post_type'],
 			'posts_per_page' => $instance['limit']
 		);
 
