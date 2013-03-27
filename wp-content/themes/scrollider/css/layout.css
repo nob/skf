@@ -534,7 +534,7 @@ INDEX
     z-index: 1;
   }
   .has-slider #featured header h1 {
-    font-size: 2.6em;
+    font-size: 2.4em;
   }
   .has-slider #featured .flex-control-nav {
     display: block;
@@ -548,7 +548,7 @@ INDEX
   .has-slider #featured .slide .slide-content-container {
     position: absolute;
     top: 0;
-    padding-top: 11.089em;
+    padding-top: 9.089em;
     width: 100%;
   }
   .has-slider #featured .slide .slide-content-container .entry {
@@ -558,7 +558,7 @@ INDEX
     padding: 0;
   }
   .has-slider #featured .slide.has-overlay .slide-content {
-    padding: 1.0em;
+    padding: 0.2em;
     margin: 0px auto;
     width: 560px;
     background: #000000;
