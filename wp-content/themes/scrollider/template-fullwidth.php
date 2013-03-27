@@ -55,5 +55,8 @@ if ( ! empty( $_SERVER['SCRIPT_FILENAME'] ) && basename( __FILE__ ) == basename(
 		<?php woo_main_after(); ?>
 		
     </div><!-- /#content -->
-		
+    <?php
+        // Output the Features Area
+        get_template_part( 'includes/home-panel-features' );
+    ?>		
 <?php get_footer(); ?>
