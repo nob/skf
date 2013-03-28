@@ -428,8 +428,12 @@ INDEX
   .home #home-widgets .block {
     float: left;
   }
+  .home #home-widgets.columns-3 {
+      padding-top: 2.3%;
+      padding-left: 2.90%;
+   }
   .home #home-widgets.columns-3 .block {
-    margin-right: 3.63%;
+    margin-right: 2.00%;
     width: 30.91%;
   }
   .home #home-widgets.columns-3 .block.home-widget-3 {

@@ -100,7 +100,13 @@ a:hover {
 }
 /* Home Widgets */
 #home-widgets .block a {
+  /*
   color: #3b9c7b;
+  */
+  color: #4a4a4a;
+}
+#home-widgets .block a.button {
+  color: #f9f9f9;
 }
 /* Global Widgets */
 .widget h3 {
@@ -207,7 +213,10 @@ a.comment-reply-link,
 input[type=submit],
 input.button,
 button.button {
+  background: #696969;
+  /*
   background: #2d7e6d;
+  */
 }
 a.button:hover,
 a.comment-reply-link:hover,
@@ -216,5 +225,8 @@ a.comment-reply-link:hover,
 input[type=submit]:hover,
 input.button:hover,
 button.button:hover {
+  background: #909090;
+  /*
   background: #2d7e6d;
+  */
 }

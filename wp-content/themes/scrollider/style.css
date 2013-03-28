@@ -1668,7 +1668,7 @@ body.without-features #content {
   background-clip: padding-box;
 }
 .widget_woo_slider ul li.slide a.widget-slider-title {
-  font-size: 1.618em;
+  font-size: 1.418em;
   font-family: "Merriweather", sans-serif;
   display: inline-block;
   margin: 0 0 .53em;
@@ -2838,7 +2838,7 @@ input.button,
 button.button,
 p.follow-link a {
   display: inline-block;
-  padding: .53em 1em;
+  padding: .25em .50em;
   color: white;
   text-align: center;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);

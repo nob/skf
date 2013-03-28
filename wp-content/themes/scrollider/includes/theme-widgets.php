@@ -17,6 +17,8 @@ $widgets = array(
 				'includes/widgets/widget-woo-search.php', 
 				'includes/widgets/widget-woo-subscribe.php',
 				'includes/widgets/widget-woo-post-type-slider.php',
+				'includes/widgets/widget-woo-message-page.php',
+				'includes/widgets/widget-woo-about-page.php',
 				'includes/widgets/widget-woo-newsfromblog.php',
 				'includes/widgets/widget-woo-feedback.php', 
 				'includes/widgets/widget-woo-relatedposts.php'
